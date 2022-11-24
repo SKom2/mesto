@@ -7,11 +7,29 @@
 @import url(../blocks/root/root.css);
 @import url(../blocks/root/__container/root__container.css);
 
+@import url(../blocks/button/button.css);
+@import url(../blocks/button/__vector/button__vector.css);
+@import url(../blocks/button/__vector/_pen/button__vector_pen.css);
+@import url(../blocks/button/__vector/_plus/button__vector_plus.css);
+
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__container/header__container.css);
 @import url(../blocks/header/__body/header__body.css);
 @import url(../blocks/header/__logo/header__logo.css);
 
 @import url(../blocks/main/);
+@import url(../blocks/main/__profile/main__profile.css);
+
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/profile/__container/profile__container.css);
+@import url(../blocks/profile/__body/profile__body.css);
+@import url(../blocks/profile/__avatar/profile__avatar.css);
+@import url(../blocks/profile/__info/profile__info.css);
+@import url(../blocks/profile/__header/profile__header.css);
+@import url(../blocks/profile/__title/info__title.css);
+@import url(../blocks/profile/__subtitle/info__subtitle.css);
+@import url(../blocks/profile/__button/profile__button.css);
+@import url(../blocks/profile/__button/_edit/profile__button_edit.css);
+@import url(../blocks/profile/__button/_add/profile__button_add.css);
 
 @import url(../blocks/footer/footer.css);

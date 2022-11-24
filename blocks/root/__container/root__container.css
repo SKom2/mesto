@@ -4,3 +4,10 @@
     padding: 0 27px;
     box-sizing: content-box;
 }
+
+@media screen and (max-width: 425px) {
+    .root__container{
+        padding-right: 19px;
+        padding-left: 19px;
+    }
+}
