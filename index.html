@@ -24,15 +24,15 @@
                         <div class="profile__info">
                             <div class="profile__header">
                                 <h1 class="profile__title">Жак-Ив Кусто</h1>
-                                <div class="profile__button profile__button_edit button">
+                                <a href="#" class="profile__button profile__button_edit button">
                                     <img src="./images/profile/Pen.png" alt="Pen" class="button__vector button__vector_pen">
-                                </div>
+                                </a>
                             </div>
                             <p class="profile__subtitle">Исследователь океана</p>
                         </div>
-                        <div class="profile__button profile__button_add button">
+                        <a href="#" class="profile__button profile__button_add button">
                             <img src="./images/profile/Plus.png" alt="Plus" class="button__vector button__vector_plus">
-                        </div>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -42,32 +42,32 @@
                         <article class="places__card card">
                             <img src="./images/places/01.jpg" alt="Церковь" class="card__image">
                             <h2 class="card__title">Карачаевск</h2>
-                            <img src="./images/places/Like.svg" alt="Лайк" class="card__like">
+                            <a href="#" class="card__like"></a>
                         </article>
                         <article class="places__card card">
                             <img src="./images/places/02.jpg" alt="Седона" class="card__image">
                             <h2 class="card__title">Гора Эльбрус</h2>
-                            <img src="./images/places/Like.svg" alt="Лайк" class="card__like">
+                            <a href="#" class="card__like"></a>
                         </article>
                         <article class="places__card card">
                             <img src="./images/places/03.jpg" alt="Домбай" class="card__image">
                             <h2 class="card__title">Домбай</h2>
-                            <img src="./images/places/Like.svg" alt="Лайк" class="card__like">
+                            <a href="#" class="card__like"></a>
                         </article>
                         <article class="places__card card">
                             <img src="./images/places/04.jpg" alt="Таймс-Сквер" class="card__image">
                             <h2 class="card__title">Таймс-Сквер</h2>
-                            <img src="./images/places/Like.svg" alt="Лайк" class="card__like">
+                            <a href="#" class="card__like"></a>
                         </article>
                         <article class="places__card card">
                             <img src="./images/places/05.jpg" alt="Седон" class="card__image">
                             <h2 class="card__title">Седон</h2>
-                            <img src="./images/places/Like.svg" alt="Лайк" class="card__like">
+                            <a href="#" class="card__like"></a>
                         </article>
                         <article class="places__card card">
                             <img src="./images/places/06.jpg" alt="Эмералд" class="card__image">
                             <h2 class="card__title">Эмералд</h2>
-                            <img src="./images/places/Like.svg" alt="Лайк" class="card__like">
+                            <a href="#" class="card__like"></a>
                         </article>
                     </div>
                 </div>
@@ -79,9 +79,21 @@
             </div>
         </footer>
     </div>
-    <section class="main__popup popup">
-        <div class="popup__container">
-            
+    <section class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close"></a>
+                <form class="popup__form form">
+                    <div class="form__container">
+                        <h2 class="form__title">Редактировать профиль</h2>
+                        <fieldset class="form__input-container">
+                            <input type="text" class="form__item form__item_el_heading" placeholder="Жак-Ив Кусто">
+                            <input type="text" class="form__item form__item_el_subheading" placeholder="Исследователь океана">
+                        </fieldset>
+                        <a href="#" class="form__button">Сохранить</a>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 </body>
