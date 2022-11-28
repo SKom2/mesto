@@ -1,6 +1,5 @@
 @import url(../vendor/normalize.css);
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;900&display=swap');
+@import url(../vendor/fonts.css);
 
 @import url(../blocks/page/page.css);
 
@@ -32,7 +31,7 @@
 @import url(../blocks/header/__body/header__body.css);
 @import url(../blocks/header/__logo/header__logo.css);
 
-@import url(../blocks/main/);
+@import url(../blocks/main/main.css);
 @import url(../blocks/main/__profile/main__profile.css);
 
 @import url(../blocks/profile/profile.css);

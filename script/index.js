@@ -14,16 +14,16 @@ function closePopup(){
     popup.classList.remove('popup_opened');    
 };
 
-let formElement = document.querySelector('.form');
-let nameInput = document.querySelector('#name');
-let jobInput = formElement.querySelector('#job');
+const formElement = document.querySelector('.form');
+const nameInput = formElement.querySelector('#name');
+const jobInput = formElement.querySelector('#job');
 
 formElement.addEventListener('submit',  saveForm);
 
 function saveForm(evt) {
     evt.preventDefault();
-    let nameInputValue = nameInput.value;
-    let jobInputValue = jobInput.value;
+    const nameInputValue = nameInput.value;
+    const jobInputValue = jobInput.value;
     document.querySelector('.profile__title').textContent = nameInputValue;
     document.querySelector('.profile__subtitle').textContent = jobInputValue;
     popup.classList.remove('popup_opened');
