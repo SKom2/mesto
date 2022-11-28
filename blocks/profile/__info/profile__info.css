@@ -1,6 +1,7 @@
 .profile__info{
     color: white;
     margin-top: 22px;
+    max-width: 100%;
 }
 
 .profile__info > *:not(:last-child){
