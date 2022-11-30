@@ -1,0 +1,7 @@
+.card__heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 23px;
+    margin: 23px 15px 29px 21px;
+}

@@ -1,12 +1,11 @@
-.profile__button_edit{
+.profile__button_type_edit{
     padding: 7px;
     align-self: end;
     margin-bottom: 9px;
-    margin-left: 18px;
 }
 
 @media screen and (max-width: 425px) {
-    .profile__button_edit{
+    .profile__button_type_edit{
         padding: 5.25px;
         margin-bottom: 6px;
         margin-left: 10px;
