@@ -1,11 +1,11 @@
 .card__like{
-    position: absolute;
-    right: 20px;
-    bottom: 30px;
     transition: opacity .2s linear;
     background-image: url(../../../images/places/Like.svg);
+    background-color: transparent;
+    border: none;
     width: 22px;
     height: 19px;
+    margin-right: 5px;
 }
 
 .card__like:hover{
