@@ -12,3 +12,6 @@
     line-height: 17px;
 }
 
+.form__item:not(:last-child){
+    margin-bottom: 30px;
+}

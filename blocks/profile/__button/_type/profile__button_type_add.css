@@ -1,18 +1,19 @@
-.profile__button_add{
+.profile__button_type_add{
     padding: 14px 0;
     align-self: center;
     grid-column: 4/5;
     border: 2px solid white;
+    border-radius: 2px;
 }
 
 @media screen and (max-width: 768px) {
-    .profile__button_add{
+    .profile__button_type_add{
         align-self: stretch;
     }
 }
 
 @media screen and (max-width: 425px) {
-    .profile__button_add{
+    .profile__button_type_add{
         padding-top: 17px;
         padding-bottom: 17px;
     }
