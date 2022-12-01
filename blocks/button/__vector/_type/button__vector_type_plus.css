@@ -2,3 +2,9 @@
     margin: 0 auto;
 }
 
+@media screen and (max-width: 425px) {
+    .button__vector_type_plus{
+        width: 16px;
+        height: 16px;
+    }
+}
