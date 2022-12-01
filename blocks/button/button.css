@@ -1,5 +1,4 @@
 .button{
-    display: inline-flex;
     border: 1px solid white;
     transition: opacity .1s linear;
     background-color: transparent;

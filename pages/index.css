@@ -7,9 +7,6 @@
 @import url(../blocks/root/__container/root__container.css);
 
 @import url(../blocks/button/button.css);
-@import url(../blocks/button/__vector/button__vector.css);
-@import url(../blocks/button/__vector/_type/button__vector_type_pen.css);
-@import url(../blocks/button/__vector/_type/button__vector_type_plus.css);
 
 @import url(../blocks/card/card.css);
 @import url(../blocks/card/__heading/card__heading.css);
