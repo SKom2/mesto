@@ -2,6 +2,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+<<<<<<< HEAD
     max-height: 23px;
     margin: 25px 15px 31px 21px;
+=======
+    margin: 23px 15px 29px 21px;
+>>>>>>> develop
 }
