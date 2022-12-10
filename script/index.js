@@ -15,7 +15,7 @@ function openPopup() {
 };
 
 function closePopup(){
-    popup.classList.remove('popup_opened');    
+    popup.classList.remove('popup_opened');
 };
 
 function saveForm(evt) {
@@ -30,3 +30,50 @@ function saveForm(evt) {
 formElement.addEventListener('submit',  saveForm);
 editButton.addEventListener('click', openPopup);
 popupClose.addEventListener('click', closePopup);
+
+
+const initialCards = [
+    {
+        name: 'Архыз',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+    },
+    {
+        name: 'Челябинская область',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+    },
+    {
+        name: 'Иваново',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+    },
+    {
+        name: 'Камчатка',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+    },
+    {
+        name: 'Холмогорский район',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+    },
+    {
+        name: 'Байкал',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+    }
+];
+
+const places = document.querySelector('.places');
+const cardTemplate = document.querySelector('#card-template');
+
+const createList = (item) => {
+    const card = cardTemplate.content.querySelector('.places__card').cloneNode(true);
+    card.querySelector('.card__image').src = item.link;
+    card.querySelector('.card__title').textContent = item.name;
+    return card;
+};
+const renderCard = (item) => {
+    places.append(createList(item));
+};
+
+initialCards.forEach((title) => {
+    renderCard(title);
+});
+
+
