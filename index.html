@@ -19,11 +19,11 @@
                 <div class="profile__info">
                     <div class="profile__header">
                         <h1 class="profile__title">Жак-Ив Кусто</h1>
-                        <button aria-label="Кнопка для открытия попапа" type="button" class="profile__button profile__button_type_edit button"></button>
+                        <button aria-label="Кнопка для открытия попапа" type="button" class="profile__button profile__button_type_edit button" id="button_edit"></button>
                     </div>
                     <p class="profile__subtitle">Исследователь океана</p>
                 </div>
-                <button type="button" class="profile__button profile__button_type_add button"></button>
+                <button type="button" class="profile__button profile__button_type_add button" id="button_add"></button>
             </div>
         </section>
         <section class="main__places places root__container">
@@ -45,16 +45,29 @@
     </article>
 </template>
 
-<div class="popup">
+<div class="popup" id="popup_edit">
     <div class="popup__container">
-        <button type="button" class="popup__close"></button>
-        <form class="popup__form form" name="profileForm">
+        <button type="button" class="popup__close" data-toggle="modal"></button>
+        <form class="popup__form form" id="form_1" name="profileForm">
             <h2 class="form__title">Редактировать профиль</h2>
             <fieldset class="form__input-container">
-                <input type="text" class="form__item form__item_el_heading" id="name" name="name" placeholder="Жак-Ив Кусто" value="Жак-Ив Кусто" required>
+                <input type="text" class="form__item form__item_el_heading" id="name" name="name" placeholder="Жак-Ив-Кусто" value="Жак-Ив-Кусто" required>
                 <input type="text" class="form__item form__item_el_subheading" id="job" name="job" placeholder="Исследователь океана" value="Исследователь океана" required>
             </fieldset>
-            <button class="form__button" type="submit">Сохранить</button>
+            <button class="form__button" type="submit" data-toggle="modal">Сохранить</button>
+        </form>
+    </div>
+</div>
+<div class="popup" id="popup_add">
+    <div class="popup__container">
+        <button type="button" class="popup__close" data-toggle="modal"></button>
+        <form class="popup__form form" id="form_2" name="photoForm">
+            <h2 class="form__title">Новое место</h2>
+            <fieldset class="form__input-container">
+                <input type="text" class="form__item form__item_el_heading" id="photo-name" name="photo-name" placeholder="Название" required>
+                <input type="text" class="form__item form__item_el_subheading" id="photo-link" name="photo" placeholder="Ссылка на картинку" required>
+            </fieldset>
+            <button class="form__button" type="submit" data-toggle="modal">Сохранить</button>
         </form>
     </div>
 </div>
