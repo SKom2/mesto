@@ -19,22 +19,6 @@ const photoPopupImage = document.querySelector('.popup__image');
 const photoPopupTitle = document.querySelector('.popup__title');
 
 const openPopup = (item) => {
-    // item.addEventListener('click', (el) => {
-    //     el.preventDefault();
-    //     if (item === editProfileButton){
-    //         editProfilePopup.classList.add('popup_opened');
-    //         nameInput.value = profileTitle.textContent;
-    //         jobInput.value = profileSubtitle.textContent;
-    //     }
-    //     else if (item === addPhotoButton){
-    //         addPhotoPopup.classList.add('popup_opened');
-    //         photoNameInput.value = '';
-    //         photoLinkInput.value = '';
-    //     }
-    //     else if (item === cardImage){
-    //         photoPopup.classList.add('popup_opened');
-    // //     }
-    // });
     item.classList.add('popup_opened');
 };
 
@@ -54,6 +38,20 @@ closePopupButton.forEach((closeButton) => {
     });
 });
 
+editProfileButton.addEventListener('click', (el) => {
+    el.preventDefault();
+    editProfilePopup.classList.add('popup_opened');
+    nameInput.value = profileTitle.textContent;
+    jobInput.value = profileSubtitle.textContent;
+});
+
+addPhotoButton.addEventListener('click', (el) => {
+    el.preventDefault();
+    addPhotoPopup.classList.add('popup_opened');
+    photoNameInput.value = '';
+    photoLinkInput.value = '';
+});
+
 const createCard = (link, title) => {
     const card = cardTemplate.content.querySelector('.places__card').cloneNode(true);
     card.querySelector('.card__image').src = link;
@@ -67,6 +65,9 @@ const createCard = (link, title) => {
         photoPopupImage.src = link;
         photoPopupImage.alt = title;
         photoPopupTitle.textContent = title;
+    })
+    card.querySelector('.card__delete').addEventListener('click', (el) => {
+        el.target.parentNode.remove();
     })
     return card;
 };
@@ -119,17 +120,6 @@ const editProfile = (e) => {
 
 addCardsForm.addEventListener('submit', renderCards);
 editCardsForm.addEventListener('submit', editProfile);
-editProfileButton.addEventListener('click', (el) => {
-    el.preventDefault();
-    editProfilePopup.classList.add('popup_opened');
-    nameInput.value = profileTitle.textContent;
-    jobInput.value = profileSubtitle.textContent;
-});
 
-addPhotoButton.addEventListener('click', (el) => {
-    el.preventDefault();
-    addPhotoPopup.classList.add('popup_opened');
-    photoNameInput.value = '';
-    photoLinkInput.value = '';
-});
+
 
