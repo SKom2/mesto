@@ -1,6 +1,7 @@
 .card__like{
     transition: opacity .2s linear;
     background-image: url(../../../images/places/Like.svg);
+    background-repeat: no-repeat;
     background-color: transparent;
     border: none;
     width: 22px;
