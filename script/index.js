@@ -3,6 +3,7 @@ const editProfileButton = document.querySelector('#button_edit');
 const editProfilePopup = document.querySelector('#popup_edit');
 const addPhotoButton = document.querySelector('#button_add')
 const addPhotoPopup = document.querySelector('#popup_add');
+const photoPopup = document.querySelector('#popup_photo');
 const popups = document.querySelectorAll('.popup');
 const addCardsForm = document.querySelector('#form_2');
 const editCardsForm =document.querySelector('#form_1')
@@ -14,38 +15,61 @@ const nameInput = document.querySelector('#name');
 const jobInput = document.querySelector('#job');
 const profileTitle = document.querySelector('.profile__title');
 const profileSubtitle = document.querySelector('.profile__subtitle');
+const photoPopupImage = document.querySelector('.popup__image');
+const photoPopupTitle = document.querySelector('.popup__title');
 
 const openPopup = (item) => {
-    item.addEventListener('click', (el) => {
-        el.preventDefault();
-        if (item === editProfileButton){
-            editProfilePopup.classList.add('popup_opened');
-            nameInput.value = profileTitle.textContent;
-            jobInput.value = profileSubtitle.textContent;
-        }
-        else if (item === addPhotoButton){
-            addPhotoPopup.classList.add('popup_opened');
-            photoNameInput.value = '';
-            photoLinkInput.value = '';
-        }
-    });
+    // item.addEventListener('click', (el) => {
+    //     el.preventDefault();
+    //     if (item === editProfileButton){
+    //         editProfilePopup.classList.add('popup_opened');
+    //         nameInput.value = profileTitle.textContent;
+    //         jobInput.value = profileSubtitle.textContent;
+    //     }
+    //     else if (item === addPhotoButton){
+    //         addPhotoPopup.classList.add('popup_opened');
+    //         photoNameInput.value = '';
+    //         photoLinkInput.value = '';
+    //     }
+    //     else if (item === cardImage){
+    //         photoPopup.classList.add('popup_opened');
+    // //     }
+    // });
+    item.classList.add('popup_opened');
 };
 
 openPopup(editProfileButton);
 openPopup(addPhotoButton);
 
-const closePopup = (item) => {
-    item.addEventListener('click', (el) => {
-        el.preventDefault();
-        popups.forEach((popup) => {
-            popup.classList.remove('popup_opened');
-        });
+const closePopup = (popups) => {
+    popups.forEach((popup) => {
+        popup.classList.remove('popup_opened');
     });
 };
 
 closePopupButton.forEach((closeButton) => {
-    closePopup(closeButton);
+    closeButton.addEventListener('click', (item) => {
+        item.preventDefault();
+        closePopup(popups);
+    });
 });
+
+const createCard = (link, title) => {
+    const card = cardTemplate.content.querySelector('.places__card').cloneNode(true);
+    card.querySelector('.card__image').src = link;
+    card.querySelector('.card__title').textContent = title;
+    card.querySelector('.card__image').alt = title;
+    card.querySelector('.card__like').addEventListener('click', (like) => {
+        like.target.classList.toggle('card__like_active');
+    });
+    card.querySelector('.card__image').addEventListener('click', (el) => {
+        openPopup(photoPopup);
+        photoPopupImage.src = link;
+        photoPopupImage.alt = title;
+        photoPopupTitle.textContent = title;
+    })
+    return card;
+};
 
 const initialCards = [
     {
@@ -74,17 +98,6 @@ const initialCards = [
     }
 ];
 
-const createCard = (link, title) => {
-    const card = cardTemplate.content.querySelector('.places__card').cloneNode(true);
-    card.querySelector('.card__image').src = link;
-    card.querySelector('.card__title').textContent = title;
-    card.querySelector('.card__image').alt = title;
-    card.querySelector('.card__like').addEventListener('click', (like) => {
-        like.target.classList.toggle('card__like_active');
-    });
-    return card;
-};
-
 initialCards.forEach((item) => {
     places.append(createCard(item.link, item.name));
 });
@@ -92,7 +105,8 @@ initialCards.forEach((item) => {
 const renderCards = (e) => {
     e.preventDefault();
     places.prepend(createCard(photoLinkInput.value, photoNameInput.value));
-}
+    closePopup(popups);
+};
 
 const editProfile = (e) => {
     e.preventDefault();
@@ -100,9 +114,22 @@ const editProfile = (e) => {
     const jobInputValue = jobInput.value;
     profileTitle.textContent = nameInputValue;
     profileSubtitle.textContent = jobInputValue;
-}
+    closePopup(popups);
+};
 
 addCardsForm.addEventListener('submit', renderCards);
 editCardsForm.addEventListener('submit', editProfile);
+editProfileButton.addEventListener('click', (el) => {
+    el.preventDefault();
+    editProfilePopup.classList.add('popup_opened');
+    nameInput.value = profileTitle.textContent;
+    jobInput.value = profileSubtitle.textContent;
+});
 
+addPhotoButton.addEventListener('click', (el) => {
+    el.preventDefault();
+    addPhotoPopup.classList.add('popup_opened');
+    photoNameInput.value = '';
+    photoLinkInput.value = '';
+});
 
