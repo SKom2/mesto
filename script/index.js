@@ -4,7 +4,6 @@ const editProfilePopup = document.querySelector('#popup_edit');
 const addPhotoButton = document.querySelector('#button_add')
 const addPhotoPopup = document.querySelector('#popup_add');
 const photoPopup = document.querySelector('#popup_photo');
-const popup = document.querySelectorAll('.popup');
 const addCardsForm = document.querySelector('#form_2');
 const editCardsForm =document.querySelector('#form_1')
 const places = document.querySelector('.places');
@@ -99,7 +98,7 @@ initialCards.forEach((item) => {
 const renderCards = (e) => {
     e.preventDefault();
     places.prepend(createCard(photoLinkInput.value, photoNameInput.value));
-    closePopup(popup);
+    closePopup(addPhotoPopup);
 };
 
 const editProfile = (e) => {
@@ -108,7 +107,7 @@ const editProfile = (e) => {
     const jobInputValue = jobInput.value;
     profileTitle.textContent = nameInputValue;
     profileSubtitle.textContent = jobInputValue;
-    closePopup(popup);
+    closePopup(editProfilePopup);
 };
 
 addCardsForm.addEventListener('submit', renderCards);
