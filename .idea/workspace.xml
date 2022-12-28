@@ -6,15 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="44af934c-b26c-43d1-9c62-09291d726788" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/form/__button/form__button.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/form/__button/form__button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/form/__input-container/form__input-container.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/form/__input-container/form__input-container.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/form/__item/_el/form__item_el_heading.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/form/__item/_el/form__item_el_subheading.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/form/__item/form__item.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/form/__title/form__title.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/form/__title/form__title.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__container/popup__container.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__container/popup__container.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__container/_type/popup__container_type_photo.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__container/_type/popup__container_type_photo.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

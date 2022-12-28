@@ -26,29 +26,22 @@ const validationConfig = {
     errorClass: 'form__input-error_active'
 };
 
-const openPopup = (item) => {
-    item.classList.add('popup_opened');
+const openPopup = (popups) => {
+    popups.classList.add('popup_opened');
 };
 
-openPopup(editProfileButton);
-openPopup(addPhotoButton);
-
-const closePopup = (popups) => {
-    popups.forEach((popup) => {
-        popup.classList.remove('popup_opened');
-    });
+const closePopup = (popup) => {
+    popup.classList.remove('popup_opened');
 };
 
 closePopupButton.forEach((closeButton) => {
-    closeButton.addEventListener('click', (item) => {
-        item.preventDefault();
-        closePopup(popups);
-    });
+    const popup = closeButton.closest('.popup');
+    closeButton.addEventListener('click', () => closePopup(popup))
 });
 
 editProfileButton.addEventListener('click', (el) => {
     el.preventDefault();
-    editProfilePopup.classList.add('popup_opened');
+    openPopup(editProfilePopup);
     nameInput.value = profileTitle.textContent;
     jobInput.value = profileSubtitle.textContent;
     setButtonState(editProfilePopup, validationConfig);
@@ -57,10 +50,19 @@ editProfileButton.addEventListener('click', (el) => {
 
 addPhotoButton.addEventListener('click', (el) => {
     el.preventDefault();
-    addPhotoPopup.classList.add('popup_opened');
+    openPopup(addPhotoPopup);
     photoNameInput.value = '';
     photoLinkInput.value = '';
     setButtonState(addPhotoPopup, validationConfig);
+});
+
+popups.forEach((popup) => {
+    popup.addEventListener('click', (el) => {
+        console.log(el.target)
+        if (el.target === popup) {
+            closePopup(popup);
+        };
+    });
 });
 
 const createCard = (link, title) => {
@@ -71,14 +73,14 @@ const createCard = (link, title) => {
     card.querySelector('.card__like').addEventListener('click', (like) => {
         like.target.classList.toggle('card__like_active');
     });
-    card.querySelector('.card__image').addEventListener('click', (el) => {
+    card.querySelector('.card__image').addEventListener('click', () => {
         openPopup(photoPopup);
         photoPopupImage.src = link;
         photoPopupImage.alt = title;
         photoPopupTitle.textContent = title;
     })
-    card.querySelector('.card__delete').addEventListener('click', (el) => {
-        el.target.parentNode.remove();
+    card.querySelector('.card__delete').addEventListener('click', () => {
+        card.closest('.places__card').remove();
     })
     return card;
 };
@@ -117,7 +119,7 @@ initialCards.forEach((item) => {
 const renderCards = (e) => {
     e.preventDefault();
     places.prepend(createCard(photoLinkInput.value, photoNameInput.value));
-    closePopup(popups);
+    closePopup(addPhotoPopup);
 };
 
 const editProfile = (e) => {
@@ -126,7 +128,7 @@ const editProfile = (e) => {
     const jobInputValue = jobInput.value;
     profileTitle.textContent = nameInputValue;
     profileSubtitle.textContent = jobInputValue;
-    closePopup(popups);
+    closePopup(editProfilePopup);
 };
 
 addCardsForm.addEventListener('submit', renderCards);
