@@ -17,6 +17,14 @@ const profileTitle = document.querySelector('.profile__title');
 const profileSubtitle = document.querySelector('.profile__subtitle');
 const photoPopupImage = document.querySelector('.popup__image');
 const photoPopupTitle = document.querySelector('.popup__title');
+const validationConfig = {
+    formSelector: '.form',
+    inputSelector: '.form__input',
+    submitButtonSelector: '.form__button',
+    inactiveButtonClass: 'form__button_inactive',
+    inputErrorClass: 'form__input_type_error',
+    errorClass: 'form__input-error_active'
+};
 
 const openPopup = (item) => {
     item.classList.add('popup_opened');
@@ -43,6 +51,8 @@ editProfileButton.addEventListener('click', (el) => {
     editProfilePopup.classList.add('popup_opened');
     nameInput.value = profileTitle.textContent;
     jobInput.value = profileSubtitle.textContent;
+    setButtonState(editProfilePopup, validationConfig);
+    setInputValidity(editProfilePopup, validationConfig);
 });
 
 addPhotoButton.addEventListener('click', (el) => {
@@ -50,6 +60,7 @@ addPhotoButton.addEventListener('click', (el) => {
     addPhotoPopup.classList.add('popup_opened');
     photoNameInput.value = '';
     photoLinkInput.value = '';
+    setButtonState(addPhotoPopup, validationConfig);
 });
 
 const createCard = (link, title) => {
@@ -121,5 +132,4 @@ const editProfile = (e) => {
 addCardsForm.addEventListener('submit', renderCards);
 editCardsForm.addEventListener('submit', editProfile);
 
-
-
+enableValidation(validationConfig);
