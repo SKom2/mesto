@@ -23,24 +23,33 @@ const validationConfig = {
     submitButtonSelector: '.form__button',
     inactiveButtonClass: 'form__button_inactive',
     inputErrorClass: 'form__input_type_error',
-    errorClass: 'form__input-error_active'
+    errorClass: 'form__input-error_visible'
 };
+
+const closePopupByTapOnEsc = (evt) => {
+    if (evt.key === 'Escape'){
+        const popup = document.querySelector('.popup_opened');
+        closePopup(popup);
+    }
+}
 
 const openPopup = (popups) => {
     popups.classList.add('popup_opened');
+    document.addEventListener('keydown', closePopupByTapOnEsc);
 };
 
 const closePopup = (popup) => {
     popup.classList.remove('popup_opened');
-};
+    document.removeEventListener('keydown', closePopupByTapOnEsc);
+}
 
 closePopupButton.forEach((closeButton) => {
     const popup = closeButton.closest('.popup');
     closeButton.addEventListener('click', () => closePopup(popup))
 });
 
-editProfileButton.addEventListener('click', (el) => {
-    el.preventDefault();
+editProfileButton.addEventListener('click', (evt) => {
+    evt.preventDefault();
     openPopup(editProfilePopup);
     nameInput.value = profileTitle.textContent;
     jobInput.value = profileSubtitle.textContent;
@@ -48,8 +57,8 @@ editProfileButton.addEventListener('click', (el) => {
     setInputValidity(editProfilePopup, validationConfig);
 });
 
-addPhotoButton.addEventListener('click', (el) => {
-    el.preventDefault();
+addPhotoButton.addEventListener('click', (evt) => {
+    evt.preventDefault();
     openPopup(addPhotoPopup);
     photoNameInput.value = '';
     photoLinkInput.value = '';
@@ -57,11 +66,10 @@ addPhotoButton.addEventListener('click', (el) => {
 });
 
 popups.forEach((popup) => {
-    popup.addEventListener('click', (el) => {
-        console.log(el.target)
-        if (el.target === popup) {
+    popup.addEventListener('mousedown', (evt) => {
+        if (evt.target === popup) {
             closePopup(popup);
-        };
+        }
     });
 });
 
@@ -116,14 +124,14 @@ initialCards.forEach((item) => {
     places.append(createCard(item.link, item.name));
 });
 
-const renderCards = (e) => {
-    e.preventDefault();
+const renderCards = (evt) => {
+    evt.preventDefault();
     places.prepend(createCard(photoLinkInput.value, photoNameInput.value));
     closePopup(addPhotoPopup);
 };
 
-const editProfile = (e) => {
-    e.preventDefault();
+const editProfile = (evt) => {
+    evt.preventDefault();
     const nameInputValue = nameInput.value;
     const jobInputValue = jobInput.value;
     profileTitle.textContent = nameInputValue;

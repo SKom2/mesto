@@ -1,8 +1,8 @@
 const showError = (formElement, inputElement, config) => {
     const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
     inputElement.classList.add(config.inputErrorClass);
-    errorElement.textContent = inputElement.validationMessage;
     errorElement.classList.add(config.errorClass);
+    errorElement.textContent = inputElement.validationMessage;
 };
 
 const hideError = (formElement, inputElement, config) => {
