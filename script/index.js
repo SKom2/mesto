@@ -1,11 +1,11 @@
-const closePopupButton = document.querySelectorAll('.popup__close');
-const editProfileButton = document.querySelector('#button_edit');
-const editProfilePopup = document.querySelector('#popup_edit');
-const addPhotoButton = document.querySelector('#button_add')
-const addPhotoPopup = document.querySelector('#popup_add');
+const popupCloseButtons = document.querySelectorAll('.popup__close');
+const profileEditButton = document.querySelector('#button_edit');
+const profileEditPopup = document.querySelector('#popup_edit');
+const photoAddButton = document.querySelector('#button_add')
+const photoAddPopup = document.querySelector('#popup_add');
 const photoPopup = document.querySelector('#popup_photo');
-const addCardsForm = document.querySelector('#form_2');
-const editCardsForm =document.querySelector('#form_1')
+const cardsAddForm = document.querySelector('#form_2');
+const cardsEditForm =document.querySelector('#form_1')
 const places = document.querySelector('.places');
 const popups = document.querySelectorAll('.popup')
 const cardTemplate = document.querySelector('#card-template');
@@ -26,7 +26,7 @@ const validationConfig = {
     errorClass: 'form__input-error_visible'
 };
 
-const closePopupByTapOnEsc = (evt) => {
+const handleClosePopupByTapOnEsc = (evt) => {
     if (evt.key === 'Escape'){
         const popup = document.querySelector('.popup_opened');
         closePopup(popup);
@@ -35,35 +35,35 @@ const closePopupByTapOnEsc = (evt) => {
 
 const openPopup = (popups) => {
     popups.classList.add('popup_opened');
-    document.addEventListener('keydown', closePopupByTapOnEsc);
+    document.addEventListener('keydown', handleClosePopupByTapOnEsc);
 };
 
 const closePopup = (popup) => {
     popup.classList.remove('popup_opened');
-    document.removeEventListener('keydown', closePopupByTapOnEsc);
+    document.removeEventListener('keydown', handleClosePopupByTapOnEsc);
 }
 
-closePopupButton.forEach((closeButton) => {
+popupCloseButtons.forEach((closeButton) => {
     const popup = closeButton.closest('.popup');
     closeButton.addEventListener('click', () => closePopup(popup))
 });
 
-editProfileButton.addEventListener('click', (evt) => {
+profileEditButton.addEventListener('click', (evt) => {
     evt.preventDefault();
-    openPopup(editProfilePopup);
     nameInput.value = profileTitle.textContent;
     jobInput.value = profileSubtitle.textContent;
-    setButtonState(editProfilePopup, validationConfig);
-    setInputValidity(editProfilePopup, validationConfig);
+    setButtonState(profileEditPopup, validationConfig);
+    setInputValidity(profileEditPopup, validationConfig);
+    openPopup(profileEditPopup);
 });
 
 
-addPhotoButton.addEventListener('click', (evt) => {
+photoAddButton.addEventListener('click', (evt) => {
     evt.preventDefault();
-    openPopup(addPhotoPopup);
     photoNameInput.value = '';
     photoLinkInput.value = '';
-    setButtonState(addPhotoPopup, validationConfig);
+    setButtonState(photoAddPopup, validationConfig);
+    openPopup(photoAddPopup);
 });
 
 popups.forEach((popup) => {
@@ -74,22 +74,25 @@ popups.forEach((popup) => {
     });
 });
 
-const createCard = (link, title) => {
-    const card = cardTemplate.content.querySelector('.places__card').cloneNode(true);
-    card.querySelector('.card__image').src = link;
-    card.querySelector('.card__title').textContent = title;
-    card.querySelector('.card__image').alt = title;
-    card.querySelector('.card__like').addEventListener('click', (like) => {
-        like.target.classList.toggle('card__like_active');
-    });
-    card.querySelector('.card__image').addEventListener('click', () => {
+const handleLikeCard = (like) => {
+    like.target.classList.toggle('card__like_active');
+};
+
+const createCard = (cardData) => {
+    const card = cardTemplate.content.querySelector('.card').cloneNode(true);
+    const cardImage = card.querySelector('.card__image')
+    cardImage.src = cardData.link;
+    cardImage.alt = cardData.title;
+    card.querySelector('.card__title').textContent = cardData.title;
+    card.querySelector('.card__like').addEventListener('click', handleLikeCard)
+    cardImage.addEventListener('click', () => {
+        photoPopupImage.src = cardData.link;
+        photoPopupImage.alt = cardData.title;
+        photoPopupTitle.textContent = cardData.title;
         openPopup(photoPopup);
-        photoPopupImage.src = link;
-        photoPopupImage.alt = title;
-        photoPopupTitle.textContent = title;
     })
     card.querySelector('.card__delete').addEventListener('click', () => {
-        card.closest('.places__card').remove();
+        card.closest('.card').remove();
     })
     return card;
 };
@@ -122,13 +125,19 @@ const initialCards = [
 ];
 
 initialCards.forEach((item) => {
-    places.append(createCard(item.link, item.name));
+    const itemName = item.name;
+    const itemLink = item.link;
+    const cardData = {title: itemName, link: itemLink}
+    places.append(createCard(cardData));
 });
 
 const renderCards = (evt) => {
     evt.preventDefault();
-    places.prepend(createCard(photoLinkInput.value, photoNameInput.value));
-    closePopup(addPhotoPopup);
+    const nameInputValue = photoNameInput.value;
+    const linkInputValue = photoLinkInput.value;
+    const cardData = {title: nameInputValue, link: linkInputValue}
+    places.prepend(createCard(cardData));
+    closePopup(photoAddPopup);
 };
 
 const editProfile = (evt) => {
@@ -137,10 +146,10 @@ const editProfile = (evt) => {
     const jobInputValue = jobInput.value;
     profileTitle.textContent = nameInputValue;
     profileSubtitle.textContent = jobInputValue;
-    closePopup(editProfilePopup);
+    closePopup(profileEditPopup);
 };
 
-addCardsForm.addEventListener('submit', renderCards);
-editCardsForm.addEventListener('submit', editProfile);
+cardsAddForm.addEventListener('submit', renderCards);
+cardsEditForm.addEventListener('submit', editProfile);
 
 enableValidation(validationConfig);
