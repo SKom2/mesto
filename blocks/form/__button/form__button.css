@@ -14,9 +14,10 @@
     line-height: 22px;
     border-radius: 2px;
     transition: opacity .1s linear;
+    margin-top: 18px;
 }
 
-.form__button:hover{
+.form__button:not([disabled]):hover{
     opacity: .8;
 }
 
@@ -24,6 +25,7 @@
     .form__button{
         height: 46px;
         font-size: 14px;
-        line-height: 17px;  
+        line-height: 17px;
+        margin-top: 15px;
     }
 }

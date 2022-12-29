@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="44af934c-b26c-43d1-9c62-09291d726788" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
+=======
+    <list default="true" id="44af934c-b26c-43d1-9c62-09291d726788" name="Changes" comment="" />
+>>>>>>> develop
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,6 +52,16 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="validate.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/script/validate.js" working-dir="$PROJECT_DIR$/script">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.validate.js" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -66,11 +80,26 @@
       <workItem from="1670930262203" duration="409000" />
       <workItem from="1670930697376" duration="10536000" />
       <workItem from="1670965708243" duration="2609000" />
+<<<<<<< HEAD
       <workItem from="1671008499194" duration="10251000" />
       <workItem from="1671028190948" duration="1287000" />
       <workItem from="1671101167781" duration="1408000" />
       <workItem from="1671132877642" duration="602000" />
       <workItem from="1671305275354" duration="542000" />
+=======
+      <workItem from="1671008499194" duration="6881000" />
+      <workItem from="1672054944656" duration="2825000" />
+      <workItem from="1672057835289" duration="398000" />
+      <workItem from="1672076077550" duration="7270000" />
+      <workItem from="1672132929681" duration="3269000" />
+      <workItem from="1672172675395" duration="3620000" />
+      <workItem from="1672177108690" duration="170000" />
+      <workItem from="1672216699809" duration="2331000" />
+      <workItem from="1672231359872" duration="645000" />
+      <workItem from="1672243636388" duration="999000" />
+      <workItem from="1672246221126" duration="10073000" />
+      <workItem from="1672302784432" duration="2013000" />
+>>>>>>> develop
     </task>
     <servers />
   </component>

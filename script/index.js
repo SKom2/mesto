@@ -7,6 +7,7 @@ const photoPopup = document.querySelector('#popup_photo');
 const addCardsForm = document.querySelector('#form_2');
 const editCardsForm =document.querySelector('#form_1')
 const places = document.querySelector('.places');
+const popups = document.querySelectorAll('.popup')
 const cardTemplate = document.querySelector('#card-template');
 const photoLinkInput = document.querySelector('#photo-link');
 const photoNameInput = document.querySelector('#photo-name');
@@ -16,13 +17,30 @@ const profileTitle = document.querySelector('.profile__title');
 const profileSubtitle = document.querySelector('.profile__subtitle');
 const photoPopupImage = document.querySelector('.popup__image');
 const photoPopupTitle = document.querySelector('.popup__title');
+const validationConfig = {
+    formSelector: '.form',
+    inputSelector: '.form__input',
+    submitButtonSelector: '.form__button',
+    inactiveButtonClass: 'form__button_inactive',
+    inputErrorClass: 'form__input_type_error',
+    errorClass: 'form__input-error_visible'
+};
 
-const openPopup = (item) => {
-    item.classList.add('popup_opened');
+const closePopupByTapOnEsc = (evt) => {
+    if (evt.key === 'Escape'){
+        const popup = document.querySelector('.popup_opened');
+        closePopup(popup);
+    }
+};
+
+const openPopup = (popups) => {
+    popups.classList.add('popup_opened');
+    document.addEventListener('keydown', closePopupByTapOnEsc);
 };
 
 const closePopup = (popup) => {
     popup.classList.remove('popup_opened');
+    document.removeEventListener('keydown', closePopupByTapOnEsc);
 }
 
 closePopupButton.forEach((closeButton) => {
@@ -30,18 +48,30 @@ closePopupButton.forEach((closeButton) => {
     closeButton.addEventListener('click', () => closePopup(popup))
 });
 
-editProfileButton.addEventListener('click', (el) => {
-    el.preventDefault();
+editProfileButton.addEventListener('click', (evt) => {
+    evt.preventDefault();
     openPopup(editProfilePopup);
     nameInput.value = profileTitle.textContent;
     jobInput.value = profileSubtitle.textContent;
+    setButtonState(editProfilePopup, validationConfig);
+    setInputValidity(editProfilePopup, validationConfig);
 });
 
-addPhotoButton.addEventListener('click', (el) => {
-    el.preventDefault();
+
+addPhotoButton.addEventListener('click', (evt) => {
+    evt.preventDefault();
     openPopup(addPhotoPopup);
     photoNameInput.value = '';
     photoLinkInput.value = '';
+    setButtonState(addPhotoPopup, validationConfig);
+});
+
+popups.forEach((popup) => {
+    popup.addEventListener('mousedown', (evt) => {
+        if (evt.target === popup) {
+            closePopup(popup);
+        }
+    });
 });
 
 const createCard = (link, title) => {
@@ -95,14 +125,14 @@ initialCards.forEach((item) => {
     places.append(createCard(item.link, item.name));
 });
 
-const renderCards = (e) => {
-    e.preventDefault();
+const renderCards = (evt) => {
+    evt.preventDefault();
     places.prepend(createCard(photoLinkInput.value, photoNameInput.value));
     closePopup(addPhotoPopup);
 };
 
-const editProfile = (e) => {
-    e.preventDefault();
+const editProfile = (evt) => {
+    evt.preventDefault();
     const nameInputValue = nameInput.value;
     const jobInputValue = jobInput.value;
     profileTitle.textContent = nameInputValue;
@@ -113,5 +143,4 @@ const editProfile = (e) => {
 addCardsForm.addEventListener('submit', renderCards);
 editCardsForm.addEventListener('submit', editProfile);
 
-
-
+enableValidation(validationConfig);
