@@ -111,10 +111,10 @@ const renderCards = (evt) => {
     closePopup(photoAddPopup);
 };
 
-const cardsAddFormValidator = new FormValidator(validationConfig, photoAddPopup);
+const cardsAddFormValidator = new FormValidator(validationConfig, cardsAddForm);
 cardsAddFormValidator.enableValidation();
 
-const editProfileFormValidator = new FormValidator(validationConfig, profileEditPopup);
+const editProfileFormValidator = new FormValidator(validationConfig, cardsEditForm);
 editProfileFormValidator.enableValidation();
 
 profileEditButton.addEventListener('click', (evt) => {
