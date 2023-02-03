@@ -71,3 +71,9 @@ const setInputValidity = (popup, config) => {
         checkInputValidity(formElement, inputElement, config);
     });
 };
+
+class FormValidator {
+    constructor(config) {
+        
+    }
+}
