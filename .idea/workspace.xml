@@ -8,6 +8,10 @@
 <<<<<<< HEAD
     <list default="true" id="44af934c-b26c-43d1-9c62-09291d726788" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/validate.js" beforeDir="false" />
     </list>
 =======
     <list default="true" id="44af934c-b26c-43d1-9c62-09291d726788" name="Changes" comment="" />
@@ -54,7 +58,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.gutterIcons&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;liveEdit&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -105,6 +109,19 @@
       <workItem from="1672243636388" duration="999000" />
       <workItem from="1672246221126" duration="10073000" />
       <workItem from="1672302784432" duration="2013000" />
+<<<<<<< HEAD
+>>>>>>> develop
+=======
+      <workItem from="1675182977052" duration="773000" />
+      <workItem from="1675196267077" duration="850000" />
+      <workItem from="1675197999014" duration="2903000" />
+      <workItem from="1675288186134" duration="1923000" />
+      <workItem from="1675353894669" duration="8916000" />
+      <workItem from="1675415647416" duration="2141000" />
+      <workItem from="1675417989212" duration="111000" />
+      <workItem from="1675418351227" duration="27000" />
+      <workItem from="1675418953016" duration="3701000" />
+      <workItem from="1675422686471" duration="8365000" />
 >>>>>>> develop
     </task>
     <servers />
