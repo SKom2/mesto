@@ -1,20 +1,20 @@
 export class FormValidator {
-    constructor(config, popupElement) {
+    constructor(config, formElement) {
         this._config = config;
-        this._popupElement = popupElement;
-        this._inputList = Array.from(this._popupElement.querySelectorAll(this._config.inputSelector));
-        this._buttonElement = this._popupElement.querySelector(this._config.submitButtonSelector);
+        this._formElement = formElement;
+        this._inputList = Array.from(this._formElement.querySelectorAll(this._config.inputSelector));
+        this._buttonElement = this._formElement.querySelector(this._config.submitButtonSelector);
     }
 
     _showError(inputElement){
-        const errorElement = this._popupElement.querySelector(`.${inputElement.id}-error`);
+        const errorElement = this._formElement.querySelector(`.${inputElement.id}-error`);
         inputElement.classList.add(this._config.inputErrorClass);
         errorElement.classList.add(this._config.errorClass);
         errorElement.textContent = inputElement.validationMessage;
     }
 
     _hideError(inputElement){
-        const errorElement = this._popupElement.querySelector(`.${inputElement.id}-error`);
+        const errorElement = this._formElement.querySelector(`.${inputElement.id}-error`);
         inputElement.classList.remove(this._config.inputErrorClass);
         errorElement.classList.remove(this._config.errorClass);
         errorElement.textContent = '';

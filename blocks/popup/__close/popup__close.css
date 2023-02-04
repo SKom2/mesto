@@ -10,6 +10,7 @@
     transform: translate(100%, -100%);
     transition: opacity .1s linear;
     border: none;
+    cursor: pointer;
 }
 
 .popup__close:hover{

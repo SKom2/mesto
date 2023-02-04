@@ -38,6 +38,7 @@
         <template id="card-template">
             <article class="card">
                 <img alt="" class="card__image">
+                <button class="card__open-image-button"></button>
                 <div class="card__heading">
                     <h2 class="card__title"></h2>
                     <button type="button" class="card__like"></button>
@@ -49,11 +50,11 @@
         <div class="popup" id="popup_edit">
             <div class="popup__container">
                 <button type="button" class="popup__close"></button>
-                <form class="popup__form form" id="form_1" name="profileForm" novalidate>
+                <form class="popup__form form" id="profileEditForm" name="profileEditForm" novalidate>
                     <h2 class="form__title">Редактировать профиль</h2>
-                    <input type="text" class="form__input form__input_el_heading" id="name" name="name" placeholder="Жак-Ив-Кусто" value="Жак-Ив-Кусто" minlength="2" maxlength="40" required>
+                    <input type="text" class="form__input form__input_el_heading" id="name" name="name" placeholder="Имя" value="Жак-Ив-Кусто" minlength="2" maxlength="40" required>
                     <span class="form__input-error name-error"></span>
-                    <input type="text" class="form__input form__input_el_subheading" id="about-person" name="about-person" placeholder="Исследователь океана" value="Исследователь океана" minlength="2" maxlength="200" required>
+                    <input type="text" class="form__input form__input_el_subheading" id="about-person" name="about-person" placeholder="О себе" value="Исследователь океана" minlength="2" maxlength="200" required>
                     <span class="form__input-error about-person-error"></span>
                     <button class="form__button" type="submit">Сохранить</button>
                 </form>
@@ -62,7 +63,7 @@
         <div class="popup" id="popup_add">
             <div class="popup__container">
                 <button type="button" class="popup__close"></button>
-                <form class="popup__form form" id="form_2" name="photoForm" novalidate>
+                <form class="popup__form form" id="cardsAddForm" name="cardsAddForm" novalidate>
                     <h2 class="form__title">Новое место</h2>
                     <input type="text" class="form__input form__input_el_heading" id="photo-name" name="photo-name" placeholder="Название" minlength="2" maxlength="30" required>
                     <span class="form__input-error photo-name-error"></span>
@@ -75,13 +76,11 @@
         <div class="popup popup_type_photo" id="popup_photo">
             <div class="popup__container popup__container_type_photo">
                 <button type="button" class="popup__close"></button>
-                <img alt="" class="popup__image">
+                <img alt="#" class="popup__image">
                 <h2 class="popup__title"></h2>
             </div>
         </div>
 
-        <script type="module" src="./script/FormValidator.js"></script>
         <script type="module" src="./script/index.js"></script>
-        <script type="module" src="./script/Card.js"></script>
     </body>
 </html>

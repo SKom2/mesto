@@ -4,12 +4,6 @@
     object-fit: cover;
     height: 282px;
     border-radius: 10px 10px 0 0;
-    cursor: pointer;
-    background-color: #000000;
-    transition: opacity .2s linear;
 }
 
-.card__image:hover{
-    opacity: .9;
-}
 
