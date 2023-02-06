@@ -4,6 +4,10 @@
     object-fit: cover;
     height: 282px;
     border-radius: 10px 10px 0 0;
+    transition: filter .3s linear;
 }
 
+.card__image:hover{
+    filter: brightness(50%);
+}
 
