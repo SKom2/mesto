@@ -6,8 +6,89 @@
   <component name="ChangeListManager">
     <list default="true" id="44af934c-b26c-43d1-9c62-09291d726788" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/card/__image/card__image.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/card/__image/card__image.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/button/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/button/button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/card/__delete/card__delete.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/card/__delete/card__delete.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/card/__heading/card__heading.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/card/__heading/card__heading.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/card/__image/card__image.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/card/__image/card__image.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/card/__like/_active/card__like_active.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/card/__like/_active/card__like_active.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/card/__like/card__like.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/card/__like/card__like.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/card/__title/card__title.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/card/__title/card__title.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/card/card.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/card/card.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/footer/__container/footer__container.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/footer/__container/footer__container.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/footer/__text/footer__text.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/footer/__text/footer__text.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/footer/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/footer/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/form/__button/_inactive/form__button_inactive.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/form/__button/_inactive/form__button_inactive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/form/__button/form__button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/form/__button/form__button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/form/__input-container/form__input-container.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/form/__input-container/form__input-container.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/form/__input-error/_visible/form__input-error_visible.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/form/__input-error/_visible/form__input-error_visible.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/form/__input-error/form__input-error.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/form/__input-error/form__input-error.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/form/__input/_el/form__input_el_heading.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/form/__input/_el/form__input_el_heading.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/form/__input/_el/form__input_el_subheading.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/form/__input/_el/form__input_el_subheading.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/form/__input/_type/form__input_type_error.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/form/__input/_type/form__input_type_error.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/form/__input/form__input.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/form/__input/form__input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/form/__label/form__label.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/form/__label/form__label.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/form/__title/form__title.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/form/__title/form__title.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/form/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/form/form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/header/__logo/header__logo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/header/__logo/header__logo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/header/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/main/__places/main__places.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/main/__places/main__places.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/main/__profile/main__profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/main/__profile/main__profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/main/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/main/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/page/page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/page/page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/places/__container/places__container.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/places/__container/places__container.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/places/places.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/places/places.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__body/popup__body.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/__body/popup__body.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__close/popup__close.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/__close/popup__close.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__container/_type/popup__container_type_photo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/__container/_type/popup__container_type_photo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__container/popup__container.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/__container/popup__container.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__form/popup__form.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/__form/popup__form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__image/popup__image.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/__image/popup__image.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__title/popup__title.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/__title/popup__title.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/_opened/popup_opened.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/_opened/popup_opened.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/_type/popup_type_photo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/_type/popup_type_photo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/_visible/popup_visible.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/_visible/popup_visible.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/popup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__avatar/profile__avatar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__avatar/profile__avatar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__body/profile__body.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__body/profile__body.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__button/_type/profile__button_type_add.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__button/_type/profile__button_type_add.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__button/_type/profile__button_type_edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__button/_type/profile__button_type_edit.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__button/profile__button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__button/profile__button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__header/profile__header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__header/profile__header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__info/profile__info.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__info/profile__info.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__subtitle/info__subtitle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__subtitle/info__subtitle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__title/info__title.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__title/info__title.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/root/__container/root__container.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/root/__container/root__container.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/root/root.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/root/root.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/header/Vector.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/header/Vector.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/places/01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/places/01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/places/02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/places/02.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/places/03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/places/03.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/places/04.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/places/04.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/places/05.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/places/05.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/places/06.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/places/06.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/places/Like.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/places/Like.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/places/Like_active.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/places/Like_active.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/places/Trash.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/places/Trash.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/popup/Close.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/popup/Close.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/profile/Ellipse.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/profile/Ellipse.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/profile/pen.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/profile/pen.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/profile/plus.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/profile/plus.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/FormValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FormValidator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/fonts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fonts/Inter-Black.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/fonts/Inter-Black.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fonts/Inter-Black.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/fonts/Inter-Black.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fonts/Inter-Medium.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/fonts/Inter-Medium.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fonts/Inter-Medium.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/fonts/Inter-Medium.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fonts/Inter-Regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/fonts/Inter-Regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fonts/Inter-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/fonts/Inter-Regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/normalize.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +124,14 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\san4e\dev\mesto\src\pages" />
+      <recent name="C:\Users\san4e\dev\mesto\src" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration name="validate.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/script/validate.js" working-dir="$PROJECT_DIR$/script">
+    <configuration name="validate.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/script/validate.js" working-dir="$PROJECT_DIR$/src/components">
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -95,7 +182,8 @@
       <workItem from="1675422686471" duration="8365000" />
       <workItem from="1675466934906" duration="1187000" />
       <workItem from="1675528514658" duration="5502000" />
-      <workItem from="1675684949043" duration="1133000" />
+      <workItem from="1675684949043" duration="2220000" />
+      <workItem from="1676550954155" duration="1689000" />
     </task>
     <servers />
   </component>

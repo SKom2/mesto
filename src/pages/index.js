@@ -1,6 +1,6 @@
-import { Card } from "./Card.js";
-import { FormValidator} from "./FormValidator.js";
-import { validationConfig, initialCards} from "./constants.js";
+import { Card } from "../components/Card.js";
+import { FormValidator} from "../components/FormValidator.js";
+import { validationConfig, initialCards} from "../components/constants.js";
 
 const popupCloseButtons = document.querySelectorAll('.popup__close');
 const profileEditButton = document.querySelector('#button_edit');
