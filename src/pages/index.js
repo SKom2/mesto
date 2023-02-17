@@ -1,26 +1,48 @@
 import { Card } from "../components/Card.js";
 import { FormValidator} from "../components/FormValidator.js";
-import { validationConfig, initialCards} from "../utils/constants.js";
+import {
+    validationConfig,
+    initialCards,
+    popupCloseButtons,
+    profileEditButton,
+    profileEditPopup,
+    photoAddButton,
+    photoAddPopup,
+    popups,
+    cardsAddForm,
+    profileEditForm,
+    places,
+    nameInput,
+    jobInput,
+    profileTitle,
+    profileSubtitle,
+    photoPopupImage,
+    photoPopupTitle,
+    photoPopup,
+    cardData
+    } from "../utils/constants.js";
+import { Popup } from "../components/Popup.js";
+import { Section } from "../components/Section.js";
 import './index.css'
 
-const popupCloseButtons = document.querySelectorAll('.popup__close');
-const profileEditButton = document.querySelector('#button_edit');
-const profileEditPopup = document.querySelector('#popup_edit');
-const photoAddButton = document.querySelector('#button_add')
-const photoAddPopup = document.querySelector('#popup_add');
-const popups = document.querySelectorAll('.popup');
-const cardsAddForm = document.querySelector('#cardsAddForm');
-const profileEditForm =document.querySelector('#profileEditForm')
-const places = document.querySelector('.places');
-const photoLinkInput = document.querySelector('#photo-link');
-const photoNameInput = document.querySelector('#photo-name');
-const nameInput = document.querySelector('#name');
-const jobInput = document.querySelector('#about-person');
-const profileTitle = document.querySelector('.profile__title');
-const profileSubtitle = document.querySelector('.profile__subtitle');
-const photoPopupImage = document.querySelector('.popup__image');
-const photoPopupTitle = document.querySelector('.popup__title');
-const photoPopup = document.querySelector('#popup_photo');
+const cardList = new Section ({
+    items: initialCards,
+    renderer: (item) => {
+        const card = new Card(item, '#card-template', handleOpenPopup);
+        const cardElement = card.generateCard();
+        cardList.addItem(cardElement);
+    }
+}, places);
+
+
+// const newCardList = new Section({
+//     items: cardData,
+//     renderer: (item) => {
+//         const card = new Card(item, '#card-template', handleOpenPopup);
+//         const cardElement = card.generateCard();
+//         newCardList.addItem(cardElement);
+//     }
+// }, places);
 
 const openPopup = (popups) => {
     popups.classList.add('popup_opened');
@@ -68,26 +90,26 @@ const handleOpenPopup = (name, link) => {
     openPopup(photoPopup);
 }
 
-const createCard = (cardData) => {
-    return new Card(cardData, '#card-template', handleOpenPopup).generateCard();
-}
+// const createCard = (cardData) => {
+//     return new Card(cardData, '#card-template', handleOpenPopup).generateCard();
+// }
+//
+// const addCard = (newCard) => {
+//     places.prepend(newCard);
+// }
+//
+// initialCards.forEach((item) => {
+//     addCard(createCard(item));
+// })
 
-const addCard = (newCard) => {
-    places.prepend(newCard);
-}
-
-initialCards.forEach((item) => {
-    addCard(createCard(item));
-})
-
-const renderNewCard = (evt) => {
-    evt.preventDefault();
-    const nameInputValue = photoNameInput.value;
-    const linkInputValue = photoLinkInput.value;
-    const cardData = {name: nameInputValue, link: linkInputValue};
-    addCard(createCard(cardData));
-    closePopup(photoAddPopup);
-};
+// const renderNewCard = (evt) => {
+//     evt.preventDefault();
+//     const nameInputValue = photoNameInput.value;
+//     const linkInputValue = photoLinkInput.value;
+//     const cardData = {name: nameInputValue, link: linkInputValue};
+//     addCard(createCard(cardData));
+//     closePopup(photoAddPopup);
+// };
 
 const cardsAddFormValidator = new FormValidator(validationConfig, cardsAddForm);
 cardsAddFormValidator.enableValidation();
@@ -110,5 +132,7 @@ photoAddButton.addEventListener('click', (evt) => {
     cardsAddFormValidator.setButtonState();
 });
 
-cardsAddForm.addEventListener('submit', renderNewCard);
+// cardsAddForm.addEventListener('submit', newCardList.renderNewCard);
 profileEditForm.addEventListener('submit', editProfile);
+
+cardList.renderItems();

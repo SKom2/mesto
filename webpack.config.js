@@ -7,7 +7,7 @@ module.exports = {
     entry: path.resolve(__dirname, 'src', 'pages', 'index.js'),
     devtool: 'inline-source-map',
     output: {
-        filename: "[name].[contenthash].js",
+        filename: "[name].[content hash].js",
         path: path.resolve(__dirname, 'build'),
         clean: true
     },
