@@ -5,101 +5,101 @@ html {
 }
 
 body {
-    margin: 0
+    margin: 0;
 }
 
 main {
-    display: block
+    display: block;
 }
 
 h1 {
     font-size: 2em;
-    margin: .67em 0
+    margin: .67em 0;
 }
 
 hr {
     box-sizing: content-box;
     height: 0;
-    overflow: visible
+    overflow: visible;
 }
 
 pre {
     font-family: monospace, monospace;
-    font-size: 1em
+    font-size: 1em;
 }
 
 a {
-    background-color: transparent
+    background-color: transparent;
 }
 
 abbr[title] {
     border-bottom: none;
     -webkit-text-decoration: underline dotted;
-    text-decoration: underline dotted
+    text-decoration: underline dotted;
 }
 
 b, strong {
-    font-weight: bolder
+    font-weight: bolder;
 }
 
 code, kbd, samp {
     font-family: monospace, monospace;
-    font-size: 1em
+    font-size: 1em;
 }
 
 small {
-    font-size: 80%
+    font-size: 80%;
 }
 
 sub, sup {
     font-size: 75%;
     line-height: 0;
     position: relative;
-    vertical-align: baseline
+    vertical-align: baseline;
 }
 
 sub {
-    bottom: -.25em
+    bottom: -.25em;
 }
 
 sup {
-    top: -.5em
+    top: -.5em;
 }
 
 img {
-    border-style: none
+    border-style: none;
 }
 
 button, input, optgroup, select, textarea {
     font-family: inherit;
     font-size: 100%;
     line-height: 1.15;
-    margin: 0
+    margin: 0;
 }
 
 button, input {
-    overflow: visible
+    overflow: visible;
 }
 
 button, select {
-    text-transform: none
+    text-transform: none;
 }
 
 [type=button], [type=reset], [type=submit], button {
-    -webkit-appearance: button
+    -webkit-appearance: button;
 }
 
 [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner, button::-moz-focus-inner {
     border-style: none;
-    padding: 0
+    padding: 0;
 }
 
 [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring, button:-moz-focusring {
-    outline: 1px dotted ButtonText
+    outline: 1px dotted ButtonText;
 }
 
 fieldset {
-    padding: .35em .75em .625em
+    padding: .35em .75em .625em;
 }
 
 legend {
@@ -108,71 +108,71 @@ legend {
     display: table;
     max-width: 100%;
     padding: 0;
-    white-space: normal
+    white-space: normal;
 }
 
 progress {
-    vertical-align: baseline
+    vertical-align: baseline;
 }
 
 textarea {
-    overflow: auto
+    overflow: auto;
 }
 
 [type=checkbox], [type=radio] {
     box-sizing: border-box;
-    padding: 0
+    padding: 0;
 }
 
 [type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
-    height: auto
+    height: auto;
 }
 
 [type=search] {
     -webkit-appearance: textfield;
-    outline-offset: -2px
+    outline-offset: -2px;
 }
 
 [type=search]::-webkit-search-decoration {
-    -webkit-appearance: none
+    -webkit-appearance: none;
 }
 
 ::-webkit-file-upload-button {
     -webkit-appearance: button;
-    font: inherit
+    font: inherit;
 }
 
 details {
-    display: block
+    display: block;
 }
 
 summary {
-    display: list-item
+    display: list-item;
 }
 
 [hidden], template {
-    display: none
+    display: none;
 }
 
 @font-face {
     font-family: Inter;
     font-style: normal;
     font-weight: 400;
-    src: url(c8ba52b05a9ef10f4758.woff2) format("woff2"), url(8c206db99195777c6769.woff) format("woff")
+    src: url(c8ba52b05a9ef10f4758.woff2) format("woff2"), url(8c206db99195777c6769.woff) format("woff");;
 }
 
 @font-face {
     font-family: Inter;
     font-style: normal;
     font-weight: 900;
-    src: url(15ca31c0a2a68f76d2d1.woff2) format("woff2"), url(c6938660eec019fefd68.woff) format("woff")
+    src: url(15ca31c0a2a68f76d2d1.woff2) format("woff2"), url(c6938660eec019fefd68.woff) format("woff");
 }
 
 @font-face {
     font-family: Inter;
     font-style: normal;
     font-weight: 500;
-    src: url(293fd13dbca5a3e450ef.woff2) format("woff2"), url(9053572c46aeb4b16caa.woff) format("woff")
+    src: url(293fd13dbca5a3e450ef.woff2) format("woff2"), url(9053572c46aeb4b16caa.woff) format("woff");
 }
 
 .page {
@@ -187,44 +187,44 @@ summary {
     font-weight: 400;
     line-height: 1;
     min-width: 320px;
-    text-rendering: optimizeLegibility
+    text-rendering: optimizeLegibility;
 }
 
 .root__container {
     box-sizing: content-box;
     margin: 0 auto;
     max-width: 880px;
-    padding: 0 27px
+    padding: 0 27px;
 }
 
 @media screen and (max-width: 425px) {
     .root__container {
         padding-left: 19px;
-        padding-right: 19px
+        padding-right: 19px;
     }
 }
 
 .button {
     background-color: transparent;
     border: 1px solid #fff;
-    transition: opacity .1s linear
+    transition: opacity .1s linear;
 }
 
 .button:hover {
-    opacity: .6
+    opacity: .6;
 }
 
 .card {
     background-color: #fff;
     border-radius: 10px;
-    position: relative
+    position: relative;
 }
 
 .card__heading {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin: 23px 15px 29px 21px
+    margin: 23px 15px 29px 21px;
 }
 
 .card__title {
@@ -236,7 +236,7 @@ summary {
     overflow: hidden;
     padding: 0;
     text-overflow: ellipsis;
-    white-space: nowrap
+    white-space: nowrap;
 }
 
 .card__like {
@@ -248,11 +248,11 @@ summary {
     height: 19px;
     margin-right: 5px;
     transition: opacity .2s linear;
-    width: 22px
+    width: 22px;
 }
 
 .card__like:hover {
-    opacity: .5
+    opacity: .5;
 }
 
 .card__delete {
@@ -266,16 +266,16 @@ summary {
     right: 20px;
     top: 20px;
     transition: opacity .2s linear;
-    width: 18px
+    width: 18px;
 }
 
 .card__delete:hover {
     cursor: pointer;
-    opacity: .6
+    opacity: .6;
 }
 
 .card__like_active {
-    background-image: url(35948469632d0421d697.svg)
+    background-image: url(35948469632d0421d697.svg);
 }
 
 .card__image {
@@ -285,20 +285,20 @@ summary {
     -o-object-fit: cover;
     object-fit: cover;
     transition: filter .3s linear;
-    width: 100%
+    width: 100%;
 }
 
 .card__image:hover {
-    filter: brightness(50%)
+    filter: brightness(50%);
 }
 
 .form {
-    padding: 34px 36px 37px
+    padding: 34px 36px 37px;
 }
 
 @media screen and (max-width: 424px) {
     .form {
-        padding: 25px 22px
+        padding: 25px 22px;
     }
 }
 
@@ -307,14 +307,14 @@ summary {
     font-weight: 900;
     line-height: 29px;
     margin: 0 0 54px;
-    padding: 0
+    padding: 0;
 }
 
 @media screen and (max-width: 424px) {
     .form__title {
         font-size: 18px;
         line-height: 22px;
-        margin-bottom: 75px
+        margin-bottom: 75px;
     }
 }
 
@@ -328,11 +328,11 @@ summary {
     margin: 0;
     opacity: 1;
     padding: 0 0 12px;
-    width: 100%
+    width: 100%;
 }
 
 .form__input_type_error {
-    border-bottom: 1px solid red
+    border-bottom: 1px solid red;
 }
 
 .form__input-error {
@@ -341,11 +341,11 @@ summary {
     font-size: 12px;
     line-height: 15px;
     min-height: 30px;
-    visibility: hidden
+    visibility: hidden;
 }
 
 .form__input-error_visible {
-    visibility: visible
+    visibility: visible;
 }
 
 
@@ -365,11 +365,11 @@ summary {
     padding: 0;
     text-decoration: none;
     transition: opacity .1s linear;
-    width: 100%
+    width: 100%;
 }
 
 .form__button:not([disabled]):hover {
-    opacity: .8
+    opacity: .8;
 }
 
 @media screen and (max-width: 424px) {
@@ -377,7 +377,7 @@ summary {
         font-size: 14px;
         height: 46px;
         line-height: 17px;
-        margin-top: 15px
+        margin-top: 15px;
     }
 }
 
@@ -385,40 +385,40 @@ summary {
     background-color: #fff;
     border: 1px solid #000;
     color: #000;
-    opacity: .2
+    opacity: .2;
 }
 
 .header {
     border-bottom: 1px solid rgba(84, 84, 84, .7);
-    padding: 45px 0 41px
+    padding: 45px 0 41px;
 }
 
 @media screen and (max-width: 320px) {
     .header {
         padding-bottom: 31.6px;
-        padding-top: 28px
+        padding-top: 28px;
     }
 }
 
 .header__logo {
-    padding-left: 27px
+    padding-left: 27px;
 }
 
 @media screen and (max-width: 320px) {
     .header__logo {
         height: 24.4px;
-        width: 103.74px
+        width: 103.74px;
     }
 }
 
 
 .profile {
-    padding-top: 40px
+    padding-top: 40px;
 }
 
 @media screen and (max-width: 425px) {
     .profile {
-        padding-top: 42px
+        padding-top: 42px;
     }
 }
 
@@ -426,20 +426,20 @@ summary {
     display: grid;
     flex-wrap: wrap;
     gap: 30px;
-    grid-template-columns:120px 339px auto 150px
+    grid-template-columns:120px 339px auto 150px;
 }
 
 @media screen and (max-width: 768px) {
     .profile__body {
         align-items: center;
         display: flex;
-        flex-direction: column
+        flex-direction: column;
     }
 }
 
 @media screen and (max-width: 425px) {
     .profile__body {
-        gap: 0
+        gap: 0;
     }
 }
 
@@ -448,44 +448,44 @@ summary {
     height: 120px;
     -o-object-fit: cover;
     object-fit: cover;
-    width: 120px
+    width: 120px;
 }
 
 .profile__info {
     color: #fff;
     margin-top: 22px;
-    max-width: 100%
+    max-width: 100%;
 }
 
 .profile__info > :not(:last-child) {
-    margin-bottom: 7px
+    margin-bottom: 7px;
 }
 
 @media screen and (max-width: 768px) {
     .profile__info {
-        text-align: center
+        text-align: center;
     }
 }
 
 @media screen and (max-width: 425px) {
     .profile__info {
         margin-bottom: 36px;
-        margin-top: 26px
+        margin-top: 26px;
     }
 
     .profile__info > :not(:last-child) {
-        margin-bottom: 5px
+        margin-bottom: 5px;
     }
 }
 
 .profile__header {
     display: flex;
-    gap: 18px
+    gap: 18px;
 }
 
 @media screen and (max-width: 425px) {
     .profile__header {
-        gap: 10px
+        gap: 10px;
     }
 }
 
@@ -497,13 +497,13 @@ summary {
     overflow: hidden;
     padding: 0;
     text-overflow: ellipsis;
-    white-space: nowrap
+    white-space: nowrap;
 }
 
 @media screen and (max-width: 425px) {
     .profile__title {
         font-size: 27px;
-        line-height: 33px
+        line-height: 33px;
     }
 }
 
@@ -514,18 +514,18 @@ summary {
     overflow: hidden;
     padding: 0;
     text-overflow: ellipsis;
-    white-space: nowrap
+    white-space: nowrap;
 }
 
 @media screen and (max-width: 425px) {
     .profile__subtitle {
         font-size: 14px;
-        line-height: 17px
+        line-height: 17px;
     }
 }
 
 .profile__button {
-    cursor: pointer
+    cursor: pointer;
 }
 
 .profile__button_type_edit {
@@ -537,7 +537,7 @@ summary {
     margin: 0 0 9px;
     min-height: 24px;
     padding: 0;
-    width: 24px
+    width: 24px;
 }
 
 @media screen and (max-width: 425px) {
@@ -545,7 +545,7 @@ summary {
         background-size: 7.5px;
         margin-bottom: 7px;
         min-height: 18px;
-        width: 18px
+        width: 18px;
     }
 }
 
@@ -560,12 +560,12 @@ summary {
     margin: 0;
     min-height: 50px;
     padding: 0;
-    width: 100%
+    width: 100%;
 }
 
 @media screen and (max-width: 425px) {
     .profile__button_type_add {
-        background-size: 16px
+        background-size: 16px;
     }
 }
 
@@ -575,24 +575,24 @@ summary {
     display: grid;
     grid-template-columns:repeat(auto-fill, minmax(282px, 1fr));
     padding-top: 51px;
-    row-gap: 20px
+    row-gap: 20px;
 }
 
 @media screen and (max-width: 425px) {
     .places {
-        padding-top: 36px
+        padding-top: 36px;
     }
 }
 
 .footer {
     padding-bottom: 60px;
-    padding-top: 66px
+    padding-top: 66px;
 }
 
 @media screen and (max-width: 425px) {
     .footer {
         padding-bottom: 30px;
-        padding-top: 48px
+        padding-top: 48px;
     }
 }
 
@@ -601,13 +601,13 @@ summary {
     font-size: 18px;
     line-height: 22px;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 @media screen and (max-width: 425px) {
     .footer__text {
         font-size: 14px;
-        line-height: 17px
+        line-height: 17px;
     }
 }
 
@@ -623,11 +623,11 @@ summary {
     top: 0;
     transition: all .3s ease-in-out;
     visibility: hidden;
-    width: 100%
+    width: 100%;
 }
 
 .popup_type_photo {
-    background-color: rgba(0, 0, 0, .9)
+    background-color: rgba(0, 0, 0, .9);
 }
 
 .popup__container {
@@ -636,13 +636,13 @@ summary {
     box-shadow: 0 0 25px rgba(0, 0, 0, .15);
     margin: 0 19px;
     position: relative;
-    width: 430px
+    width: 430px;
 }
 
 .popup__container_type_photo {
     background-color: transparent;
     border-radius: unset;
-    width: unset
+    width: unset;
 }
 
 .popup__close {
@@ -657,25 +657,25 @@ summary {
     top: -8px;
     transform: translate(100%, -100%);
     transition: opacity .1s linear;
-    width: 32px
+    width: 32px;
 }
 
 .popup__close:hover {
-    opacity: .6
+    opacity: .6;
 }
 
 @media screen and (max-width: 660px) {
     .popup__close {
         right: 0;
         top: -16px;
-        transform: translateY(-100%)
+        transform: translateY(-100%);
     }
 }
 
 @media screen and (max-width: 425px) {
     .popup__close {
         height: 20px;
-        width: 20px
+        width: 20px;
     }
 }
 
@@ -683,12 +683,12 @@ summary {
     display: flex;
     opacity: 1;
     transition: all .3s ease-in-out;
-    visibility: visible
+    visibility: visible;
 }
 
 .popup__image {
     max-height: 75vh;
-    max-width: 75vw
+    max-width: 75vw;
 }
 
 .popup__title {
@@ -697,7 +697,7 @@ summary {
     font-weight: 400;
     line-height: 15px;
     margin: 10px 0 0;
-    padding: 0
+    padding: 0;
 }
 
 
