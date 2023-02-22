@@ -52,7 +52,7 @@
                     <h2 class="form__title">Редактировать профиль</h2>
                     <input type="text" class="form__input form__input_el_heading" id="name" name="name" placeholder="Имя" value="Жак-Ив-Кусто" minlength="2" maxlength="40" required>
                     <span class="form__input-error name-error"></span>
-                    <input type="text" class="form__input form__input_el_subheading" id="about-person" name="about-person" placeholder="О себе" value="Исследователь океана" minlength="2" maxlength="200" required>
+                    <input type="text" class="form__input form__input_el_subheading" id="about-person" name="about" placeholder="О себе" value="Исследователь океана" minlength="2" maxlength="200" required>
                     <span class="form__input-error about-person-error"></span>
                     <button class="form__button" type="submit">Сохранить</button>
                 </form>
@@ -63,9 +63,9 @@
                 <button type="button" class="popup__close"></button>
                 <form class="popup__form form" id="cardsAddForm" name="cardsAddForm" novalidate>
                     <h2 class="form__title">Новое место</h2>
-                    <input type="text" class="form__input form__input_el_heading" id="photo-name" name="photo-name" placeholder="Название" minlength="2" maxlength="30" required>
+                    <input type="text" class="form__input form__input_el_heading" id="photo-name" name="name" placeholder="Название" minlength="2" maxlength="30" required>
                     <span class="form__input-error photo-name-error"></span>
-                    <input type="url" class="form__input form__input_el_subheading" id="photo-link" name="photo-link" placeholder="Ссылка на картинку" required>
+                    <input type="url" class="form__input form__input_el_subheading" id="photo-link" name="link" placeholder="Ссылка на картинку" required>
                     <span class="form__input-error photo-link-error"></span>
                     <button class="form__button" type="submit">Создать</button>
                 </form>

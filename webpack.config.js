@@ -9,7 +9,8 @@ module.exports = {
     output: {
         filename: "[name].[content hash].js",
         path: path.resolve(__dirname, 'build'),
-        clean: true
+        publicPath: "",
+        // clean: true
     },
     module: {
         rules: [

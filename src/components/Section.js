@@ -1,6 +1,6 @@
 
 export class Section {
-    constructor({ items, renderer}, containerSelector){
+    constructor({ items, renderer }, containerSelector){
         this._renderedItems = items;
         this._renderer = renderer;
         this._container = containerSelector;
@@ -15,9 +15,4 @@ export class Section {
             this._renderer(item);
         })
     }
-
-    // renderNewCard(evt) {
-    //     evt.preventDefault();
-    //     return this._renderer(this._renderedItems);
-    // }
 }

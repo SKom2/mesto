@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44af934c-b26c-43d1-9c62-09291d726788" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Popup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Section.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mesto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mesto.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PopupWithForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PopupWithImage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UserInfo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/main.7b03ade3586d46f71f7e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Popup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/constants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
@@ -121,7 +123,16 @@
       <workItem from="1675684949043" duration="2220000" />
       <workItem from="1676550954155" duration="1689000" />
       <workItem from="1676630284971" duration="6462000" />
-      <workItem from="1676640210370" duration="8794000" />
+      <workItem from="1676640210370" duration="9650000" />
+      <workItem from="1676653612603" duration="4309000" />
+      <workItem from="1676664076666" duration="711000" />
+      <workItem from="1676705946395" duration="10014000" />
+      <workItem from="1676816188301" duration="8167000" />
+      <workItem from="1676884868313" duration="2706000" />
+      <workItem from="1676892405547" duration="11838000" />
+      <workItem from="1677008029050" duration="1650000" />
+      <workItem from="1677016153396" duration="2989000" />
+      <workItem from="1677059908988" duration="2832000" />
     </task>
     <servers />
   </component>

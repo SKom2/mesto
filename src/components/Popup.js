@@ -1,8 +1,7 @@
-import {popupCloseButtons} from "../utils/constants";
-
 export class Popup {
     constructor(popupSelector) {
         this._popupSelector = popupSelector;
+        this._handleEscClose = this._handleEscClose.bind(this);
     }
 
     open() {
@@ -15,20 +14,22 @@ export class Popup {
 
     _handleEscClose(evt) {
         if (evt.key === 'Escape'){
-            close();
+            this.close();
         }
     }
 
     setEventListeners() {
-        popupCloseButtons.forEach((closeButton) => {
-            this._closeButton = closeButton.closest(this._popupSelector);
-            closeButton.addEventListener('click', () => close());
+        this._closeButton = this._popupSelector.querySelector('.popup__close');
+        this._closeButton.addEventListener('click', () => {
+            this.close();
         });
+
         this._popupSelector.addEventListener('mousedown', (evt) => {
             if(evt.target === this._popupSelector){
-                close();
+                this.close();
             }
         })
 
+        document.addEventListener('keydown', this._handleEscClose);
     }
 }
