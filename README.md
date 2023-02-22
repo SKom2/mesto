@@ -12,4 +12,3 @@
 Язык программирования: JS.
 
 **Ссылка на проект:** https://skom2.github.io/mesto/
-![apple-mail](https://user-images.githubusercontent.com/103752057/220718428-c910525c-d0ae-4f00-bb7b-2386bda6597e.png)
