@@ -42,4 +42,4 @@
 1) Клонируем репозиторий себе на ПК;
 2) В терминале поочередно вписываем команды: npm install --> npm run build --> npm run dev
 
-Ссылка на проект для просмотра - [https://filimonovalexey.github.io/mesto/](https://skom2.github.io/mesto/)
+Ссылка на проект для просмотра - https://skom2.github.io/mesto/
