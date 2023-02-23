@@ -1,21 +1,27 @@
 import {Popup} from "./Popup.js";
 
 export class PopupWithForm extends Popup {
-    constructor({popupSelector, callBack}) {
+    constructor(popupSelector, {callBack}) {
         super(popupSelector);
         this._callBack = callBack;
         this._formElement = this._popupSelector.querySelector('.form');
+        this._inputList = this._popupSelector.querySelectorAll('.form__input');
         this.setEventListeners();
     }
 
     _getInputValues(){
-        this._formData = {};
-        this._inputList = this._popupSelector.querySelectorAll('.form__input');
+        const formData = {};
         this._inputList.forEach((input) => {
-            this._formData[input.name] = input.value;
+            formData[input.name] = input.value;
         })
 
-        return this._formData;
+        return formData;
+    }
+
+    setInputValues(inputValues) {
+        this._inputList.forEach((input) => {
+            input.value = inputValues[input.name];
+        });
     }
 
     setEventListeners() {
@@ -29,7 +35,11 @@ export class PopupWithForm extends Popup {
 
     close() {
         super.close();
-        this._formElement.reset();
+        if (this._formElement) {
+            if (this._formElement.id === 'cardsAddForm') {
+                this._formElement.reset();
+            }
+        }
     }
 
 }

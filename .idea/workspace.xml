@@ -6,6 +6,32 @@
   <component name="ChangeListManager">
     <list default="true" id="44af934c-b26c-43d1-9c62-09291d726788" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/039f1f5203f653b4bacd.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/15ca31c0a2a68f76d2d1.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/1ad06e85f169668a1f36.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/293fd13dbca5a3e450ef.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/35948469632d0421d697.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/658a4e803f66b8334f3b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/6c7bf05444b9793fdf6e.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/8c206db99195777c6769.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/9053572c46aeb4b16caa.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/bbe2a6eafac19c3d031c.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/bed8c136e13907f5eefb.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/c6938660eec019fefd68.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/c8ba52b05a9ef10f4758.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/e3c42771bff3aaa52f76.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main.6f3b1ec83ef61f698c3b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main.[content hash].js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Popup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PopupWithForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopupWithForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PopupWithImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopupWithImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,21 +59,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/san4e/dev/mesto",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editing.templates",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/san4e/dev/mesto&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\san4e\dev\mesto\src\images\header" />
@@ -124,6 +150,7 @@
       <workItem from="1677059908988" duration="2832000" />
       <workItem from="1677084473079" duration="1411000" />
       <workItem from="1677085937032" duration="2933000" />
+      <workItem from="1677135692280" duration="7562000" />
     </task>
     <servers />
   </component>
