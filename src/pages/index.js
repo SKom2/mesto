@@ -14,8 +14,9 @@ import './index.css'
 import {PopupWithImage} from "../components/PopupWithImage";
 import {Card} from "../components/Card";
 
+const popupWithImage = new PopupWithImage('#popup_photo');
+
 const renderCard = (item) => {
-    const popupWithImage = new PopupWithImage('#popup_photo');
     const card = new Card(item, '#card-template', {
         handleCardClick: (data) => {
             popupWithImage.open(data);
