@@ -17,10 +17,10 @@
                         <img src="<%=require('./images/profile/Ellipse.png')%>" alt="Аватар" class="profile__avatar">
                         <div class="profile__info">
                             <div class="profile__header">
-                                <h1 class="profile__title">Жак-Ив Кусто</h1>
+                                <h1 class="profile__title"></h1>
                                 <button aria-label="Кнопка для открытия попапа" type="button" class="profile__button profile__button_type_edit button" id="button_edit"></button>
                             </div>
-                            <p class="profile__subtitle">Исследователь океана</p>
+                            <p class="profile__subtitle"></p>
                         </div>
                         <button type="button" class="profile__button profile__button_type_add button" id="button_add"></button>
                     </div>
@@ -39,7 +39,10 @@
                 <img alt="" class="card__image">
                 <div class="card__heading">
                     <h2 class="card__title"></h2>
-                    <button type="button" class="card__like"></button>
+                    <div class="card__likes">
+                        <button type="button" class="card__like"></button>
+                        <span class="card__like-counter"></span>
+                    </div>
                 </div>
                 <button type="button" class="card__delete"></button>
             </article>

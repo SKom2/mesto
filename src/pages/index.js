@@ -1,11 +1,11 @@
 import { FormValidator } from "../components/FormValidator.js";
 import {
     validationConfig,
-    initialCards,
     profileEditButton,
     photoAddButton,
     cardsAddForm,
-    profileEditForm
+    profileEditForm,
+    apiConfig
 } from "../utils/constants.js";
 import { PopupWithForm } from "../components/PopupWithForm.js";
 import { UserInfo } from "../components/UserInfo.js";
@@ -13,6 +13,17 @@ import { Section } from "../components/Section.js";
 import './index.css'
 import {PopupWithImage} from "../components/PopupWithImage";
 import {Card} from "../components/Card";
+import {Api} from "../components/Api.js";
+
+const api = new Api(apiConfig);
+const userInfo = new UserInfo({nameSelector: '.profile__title', aboutUserSelector: '.profile__subtitle'});
+
+Promise.all([api.getProfile(), api.getCards()])
+    .then(([userData, cardsData]) => {
+        userInfo.setUserInfo(userData);
+        cardList.renderItems(cardsData);
+})
+    .catch(err => console.log(`Ошибка: ${err}`))
 
 const popupWithImage = new PopupWithImage('#popup_photo');
 
@@ -27,25 +38,30 @@ const renderCard = (item) => {
 }
 
 const cardList = new Section ({
-    items: initialCards,
     renderer: (item) => {
         renderCard(item);
     }
+
 }, '.places');
 
 const popupWithAddPhotoForm = new PopupWithForm('#popup_add', {
     callBack: (item) => {
-        renderCard(item);
+        api.addCard(item)
+            .then((res) => {
+                renderCard(item);
+            })
     }
 });
 
 const popupWithEditProfileForm = new PopupWithForm('#popup_edit', {
     callBack: (data) => {
-        userInfo.setUserInfo(data);
+        api.editProfile(data)
+            .then((res) => {
+                userInfo.setUserInfo(data);
+            })
     }
 });
 
-const userInfo = new UserInfo({nameSelector: '.profile__title', aboutUserSelector: '.profile__subtitle'});
 const cardsAddFormValidator = new FormValidator(validationConfig, cardsAddForm);
 const editProfileFormValidator = new FormValidator(validationConfig, profileEditForm);
 
@@ -61,7 +77,6 @@ photoAddButton.addEventListener('click', () => {
     cardsAddFormValidator.setButtonState();
 })
 
-cardList.renderItems();
+
 editProfileFormValidator.enableValidation();
 cardsAddFormValidator.enableValidation();
-

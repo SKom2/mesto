@@ -13,5 +13,10 @@ export class UserInfo {
     setUserInfo (data) {
         this._name.textContent = data.name;
         this._aboutUser.textContent = data.about;
+        this._userId = data._id;
+    }
+
+    getUserId() {
+        return this._userId;
     }
 }

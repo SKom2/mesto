@@ -29,11 +29,6 @@ export class Card {
         this._element = null;
     }
 
-    _likeCard() {
-        this._like = this._element.querySelector('.card__like');
-        this._like.classList.toggle('card__like_active');
-    }
-
     _setEventListeners() {
         this._deleteButton = this._element.querySelector('.card__delete');
         this._deleteButton.addEventListener('click', () => {
@@ -44,7 +39,6 @@ export class Card {
         });
         this._cardLike = this._element.querySelector('.card__like');
         this._cardLike.addEventListener('click', () => {
-            this._likeCard();
         })
     }
 
@@ -52,7 +46,6 @@ export class Card {
         this._element = this._getTemplate();
         this._setData();
         this._setEventListeners();
-
         return this._element;
     }
 

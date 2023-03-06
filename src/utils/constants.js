@@ -2,8 +2,6 @@ export const profileEditButton = document.querySelector('#button_edit');
 export const photoAddButton = document.querySelector('#button_add');
 export const cardsAddForm = document.querySelector('#cardsAddForm');
 export const profileEditForm =document.querySelector('#profileEditForm');
-export const photoPopup = document.querySelector('#popup_photo');
-
 export const validationConfig = {
     inputSelector: '.form__input',
     submitButtonSelector: '.form__button',
@@ -12,29 +10,10 @@ export const validationConfig = {
     errorClass: 'form__input-error_visible'
 };
 
-export const initialCards = [
-    {
-        name: 'Архыз',
-        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-    },
-    {
-        name: 'Челябинская область',
-        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-    },
-    {
-        name: 'Иваново',
-        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-    },
-    {
-        name: 'Камчатка',
-        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-    },
-    {
-        name: 'Холмогорский район',
-        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-    },
-    {
-        name: 'Байкал',
-        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+export const apiConfig = {
+    url: 'https://nomoreparties.co/v1/cohort-60',
+    headers: {
+        authorization: '0823f3d8-cee4-4f0b-9f88-c1dcbe025215',
+        'Content-Type': 'application/json'
     }
-];
+}
