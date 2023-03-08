@@ -47,28 +47,19 @@ export class Api {
         })
             .then((res) => this._getResponseData(res))
     }
+    handleControlLikes(request, cardId){
+        return fetch(`${this._config.url}/cards/${cardId}/likes`, {
+            method: request,
+            headers: this._config.headers,
+        })
+            .then((res) => this._getResponseData(res))
+    }
 
-    // addLike(cardId) {
-    //     return fetch(`${this._config.url}/cards/${cardId}/likes`, {
-    //         method: 'PUT',
-    //         headers: this._config.headers,
-    //     })
-    //         .then((res) => this._getResponseData(res))
-    // }
-    //
-    // deleteLike(cardId) {
-    //     return fetch(`${this._config.url}/cards/${cardId}/likes`, {
-    //         method: 'DELETE',
-    //         headers: this._config.headers,
-    //     })
-    //         .then((res) => this._getResponseData(res))
-    // }
-    //
-    // handleControlLikes(request, cardId){
-    //     return fetch(`${this._config.url}/cards/${cardId}/likes`, {
-    //         method: request,
-    //         headers: this._config.headers,
-    //     })
-    //         .then((res) => this._getResponseData(res))
-    // }
+    deleteCard(cardId) {
+        return fetch(`${this._config.url}/cards/${cardId}`, {
+            method: 'DELETE',
+            headers: this._config.headers,
+        })
+            .then((res) => this._getResponseData(res))
+    }
 }

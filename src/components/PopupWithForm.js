@@ -1,9 +1,10 @@
 import {Popup} from "./Popup.js";
 
 export class PopupWithForm extends Popup {
-    constructor(popupSelector, {callBack}) {
+    constructor(popupSelector, {callBack, submit}) {
         super(popupSelector);
         this._callBack = callBack;
+        this._submit = submit;
         this._formElement = this._popup.querySelector('.form');
         this._inputList = this._popup.querySelectorAll('.form__input');
         this.setEventListeners();
@@ -24,17 +25,14 @@ export class PopupWithForm extends Popup {
         });
     }
 
-    setEventListeners() {
-        super.setEventListeners();
-        this._formElement.addEventListener('submit', (evt) => {
-            evt.preventDefault();
-            this._callBack(this._getInputValues());
-            this.close();
-        });
+    open(cardId, element) {
+        super.open();
+        this._cardId = cardId;
+        this._element = element;
     }
 
-    close() {
-        super.close();
+    _close() {
+        super._close();
         if (this._formElement) {
             if (this._formElement.id === 'cardsAddForm') {
                 this._formElement.reset();
@@ -42,4 +40,17 @@ export class PopupWithForm extends Popup {
         }
     }
 
+    setEventListeners() {
+        super.setEventListeners();
+        this._formElement.addEventListener('submit', (evt) => {
+            evt.preventDefault();
+            if (this._submit) {
+                this._submit(this._cardId, this._element);
+            }
+            if (this._callBack) {
+                this._callBack(this._getInputValues());
+            }
+            this._close();
+        });
+    }
 }

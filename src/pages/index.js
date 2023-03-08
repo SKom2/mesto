@@ -31,8 +31,22 @@ const renderCard = (item) => {
     const card = new Card(item, '#card-template', {
         handleCardClick: (data) => {
             popupWithImage.open(data);
+        },
+        handleLikeClick: (request, cardId) => {
+            api.handleControlLikes(request, cardId)
+                .then((res) => {
+                    card.numberOfLikes(res.likes.length);
+                })
+                .catch((err) => {
+                    console.log(`Ошибка: ${err}`)
+                })
+        },
+        handleDeleteButtonClick: (cardId, element) => {
+            popupWithDeletionConfirmationForm.open(cardId, element);
         }
-    });
+    },
+        userInfo.getUserId()
+    );
     const cardElement = card.generateCard();
     cardList.addItem(cardElement);
 }
@@ -59,8 +73,23 @@ const popupWithEditProfileForm = new PopupWithForm('#popup_edit', {
             .then((res) => {
                 userInfo.setUserInfo(data);
             })
-    }
+    },
+    submit: null
 });
+
+const popupWithDeletionConfirmationForm = new PopupWithForm('#popup_delete-card', {
+        callBack: null,
+        submit: (cardId, element) => {
+            api.deleteCard(cardId)
+                .then(() => {
+                    element.remove();
+                })
+                .catch((error) => {
+                    console.log(`Ошибка ${error} в попапе подтверждения`);
+                })
+        },
+    }
+)
 
 const cardsAddFormValidator = new FormValidator(validationConfig, cardsAddForm);
 const editProfileFormValidator = new FormValidator(validationConfig, profileEditForm);
