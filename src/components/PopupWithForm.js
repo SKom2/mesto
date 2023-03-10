@@ -34,7 +34,7 @@ export class PopupWithForm extends Popup {
     _close() {
         super._close();
         if (this._formElement) {
-            if (this._formElement.id === 'cardsAddForm') {
+            if (this._formElement.id === 'cardsAddForm' || this._formElement.id === 'avatarEditForm') {
                 this._formElement.reset();
             }
         }

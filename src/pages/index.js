@@ -70,7 +70,7 @@ const popupWithAddPhotoForm = new PopupWithForm('#popup_add', {
     callBack: (item) => {
         api.addCard(item)
             .then((res) => {
-                renderCard(item);
+                renderCard(res);
             })
     }
 });
@@ -79,7 +79,7 @@ const popupWithEditProfileForm = new PopupWithForm('#popup_edit', {
     callBack: (data) => {
         api.editProfile(data)
             .then((res) => {
-                userInfo.setUserInfo(data);
+                userInfo.setUserInfo(res);
             })
     },
     submit: null

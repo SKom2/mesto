@@ -1,6 +1,6 @@
 export const profileEditButton = document.querySelector('#button_edit');
 export const photoAddButton = document.querySelector('#button_add');
-export const avatarButton = document.querySelector('.profile__avatar')
+export const avatarButton = document.querySelector('.profile__edit-avatar')
 export const cardsAddForm = document.querySelector('#cardsAddForm');
 export const profileEditForm = document.querySelector('#profileEditForm');
 export const avatarEditForm = document.querySelector('#avatarEditForm');
