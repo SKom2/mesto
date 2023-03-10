@@ -13,7 +13,7 @@ export class Api {
 
     getProfile() {
         return fetch(`${this._config.url}/users/me`, {
-            headers: this._config.headers
+                headers: this._config.headers
             })
             .then((res) => this._getResponseData(res));
     }
@@ -59,6 +59,17 @@ export class Api {
         return fetch(`${this._config.url}/cards/${cardId}`, {
             method: 'DELETE',
             headers: this._config.headers,
+        })
+            .then((res) => this._getResponseData(res))
+    }
+
+    editAvatar(link) {
+        return fetch(`${this._config.url}/users/me/avatar`, {
+            method: 'PATCH',
+            headers: this._config.headers,
+            body: JSON.stringify({
+                avatar: link
+            })
         })
             .then((res) => this._getResponseData(res))
     }

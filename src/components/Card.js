@@ -30,11 +30,6 @@ export class Card {
         this._cardName.textContent = this._name;
     }
 
-    _deleteCard() {
-        this._element.remove();
-        this._element = null;
-    }
-
     _isLiked() {
         let isLiked = false;
         this._likes.forEach((like) => {

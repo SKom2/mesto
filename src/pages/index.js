@@ -3,8 +3,10 @@ import {
     validationConfig,
     profileEditButton,
     photoAddButton,
+    avatarButton,
     cardsAddForm,
     profileEditForm,
+    avatarEditForm,
     apiConfig
 } from "../utils/constants.js";
 import { PopupWithForm } from "../components/PopupWithForm.js";
@@ -16,7 +18,12 @@ import {Card} from "../components/Card";
 import {Api} from "../components/Api.js";
 
 const api = new Api(apiConfig);
-const userInfo = new UserInfo({nameSelector: '.profile__title', aboutUserSelector: '.profile__subtitle'});
+
+const userInfo = new UserInfo({
+    nameSelector: '.profile__title',
+    aboutUserSelector: '.profile__subtitle',
+    userSelector: '.profile__avatar'
+});
 
 Promise.all([api.getProfile(), api.getCards()])
     .then(([userData, cardsData]) => {
@@ -25,7 +32,6 @@ Promise.all([api.getProfile(), api.getCards()])
 })
     .catch(err => console.log(`Ошибка: ${err}`))
 
-const popupWithImage = new PopupWithImage('#popup_photo');
 
 const renderCard = (item) => {
     const card = new Card(item, '#card-template', {
@@ -58,6 +64,8 @@ const cardList = new Section ({
 
 }, '.places');
 
+const popupWithImage = new PopupWithImage('#popup_photo');
+
 const popupWithAddPhotoForm = new PopupWithForm('#popup_add', {
     callBack: (item) => {
         api.addCard(item)
@@ -78,21 +86,31 @@ const popupWithEditProfileForm = new PopupWithForm('#popup_edit', {
 });
 
 const popupWithDeletionConfirmationForm = new PopupWithForm('#popup_delete-card', {
-        callBack: null,
-        submit: (cardId, element) => {
-            api.deleteCard(cardId)
-                .then(() => {
-                    element.remove();
-                })
-                .catch((error) => {
-                    console.log(`Ошибка ${error} в попапе подтверждения`);
-                })
-        },
-    }
-)
+    callBack: null,
+    submit: (cardId, element) => {
+        api.deleteCard(cardId)
+            .then(() => {
+                element.remove();
+            })
+            .catch((err) => {
+                console.log(`Ошибка: ${err}`);
+            })
+    },
+});
+
+const popupWithEditAvatarForm = new PopupWithForm('#popup_edit-avatar', {
+    callBack: (data) => {
+        api.editAvatar(data.link)
+            .then((res) => {
+                userInfo.setUserInfo(res)
+            })
+    },
+    submit: null
+})
 
 const cardsAddFormValidator = new FormValidator(validationConfig, cardsAddForm);
 const editProfileFormValidator = new FormValidator(validationConfig, profileEditForm);
+const editAvatarFormValidator = new FormValidator(validationConfig, avatarEditForm);
 
 profileEditButton.addEventListener('click', () => {
     const inputValues = userInfo.getUserInfo();
@@ -106,6 +124,12 @@ photoAddButton.addEventListener('click', () => {
     cardsAddFormValidator.setButtonState();
 })
 
+avatarButton.addEventListener('click', () => {
+    popupWithEditAvatarForm.open();
+    editAvatarFormValidator.setButtonState();
+})
 
+
+editAvatarFormValidator.enableValidation();
 editProfileFormValidator.enableValidation();
 cardsAddFormValidator.enableValidation();
