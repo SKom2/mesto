@@ -7,6 +7,7 @@ export class PopupWithForm extends Popup {
         this._submit = submit;
         this._formElement = this._popup.querySelector('.form');
         this._inputList = this._popup.querySelectorAll('.form__input');
+        this._button = this._popup.querySelector('.form__button');
         this.setEventListeners();
     }
 
@@ -29,6 +30,14 @@ export class PopupWithForm extends Popup {
         super.open();
         this._cardId = cardId;
         this._element = element;
+    }
+
+        changeButtonState(isLoad, currentState, loadingState) {
+        if (isLoad) {
+            this._button.textContent = loadingState
+        } else {
+            this._button.textContent = currentState;
+        }
     }
 
     _close() {

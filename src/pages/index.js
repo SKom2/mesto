@@ -43,9 +43,7 @@ const renderCard = (item) => {
                 .then((res) => {
                     card.numberOfLikes(res.likes.length);
                 })
-                .catch((err) => {
-                    console.log(`Ошибка: ${err}`)
-                })
+                .catch(err => console.log(`Ошибка: ${err}`));
         },
         handleDeleteButtonClick: (cardId, element) => {
             popupWithDeletionConfirmationForm.open(cardId, element);
@@ -68,19 +66,26 @@ const popupWithImage = new PopupWithImage('#popup_photo');
 
 const popupWithAddPhotoForm = new PopupWithForm('#popup_add', {
     callBack: (item) => {
+        popupWithAddPhotoForm.changeButtonState(true, 'Создать', 'Создание...');
         api.addCard(item)
             .then((res) => {
                 renderCard(res);
             })
+            .catch(err => console.log(`Ошибка: ${err}`))
+            .finally(() => popupWithAddPhotoForm.changeButtonState(false, 'Создать', 'Создание...'));
     }
 });
 
 const popupWithEditProfileForm = new PopupWithForm('#popup_edit', {
     callBack: (data) => {
+        popupWithEditProfileForm.changeButtonState(true, 'Сохранить', 'Сохранение...');
         api.editProfile(data)
             .then((res) => {
                 userInfo.setUserInfo(res);
             })
+            .catch(err => console.log(`Ошибка: ${err}`))
+            .finally(() => popupWithEditProfileForm.changeButtonState(false, 'Сохранить', 'Сохранение...'))
+
     },
     submit: null
 });
@@ -88,22 +93,25 @@ const popupWithEditProfileForm = new PopupWithForm('#popup_edit', {
 const popupWithDeletionConfirmationForm = new PopupWithForm('#popup_delete-card', {
     callBack: null,
     submit: (cardId, element) => {
+        popupWithDeletionConfirmationForm.changeButtonState(true, 'Да', 'Удаление...')
         api.deleteCard(cardId)
             .then(() => {
                 element.remove();
             })
-            .catch((err) => {
-                console.log(`Ошибка: ${err}`);
-            })
+            .catch(err => console.log(`Ошибка: ${err}`))
+            .finally(() => popupWithDeletionConfirmationForm.changeButtonState(false, 'Да', 'Удаление...'))
     },
 });
 
 const popupWithEditAvatarForm = new PopupWithForm('#popup_edit-avatar', {
     callBack: (data) => {
+        popupWithEditAvatarForm.changeButtonState(true, 'Сохранить', 'Сохранение...')
         api.editAvatar(data.link)
             .then((res) => {
                 userInfo.setUserInfo(res)
             })
+            .catch(err => console.log(`Ошибка: ${err}`))
+            .finally(() => popupWithEditAvatarForm.changeButtonState(false, 'Сохранить', 'Сохранение...'))
     },
     submit: null
 })
