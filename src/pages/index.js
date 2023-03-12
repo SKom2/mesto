@@ -1,17 +1,17 @@
-import { FormValidator } from "../components/FormValidator.js";
+import {FormValidator} from "../components/FormValidator.js";
 import {
-    validationConfig,
-    profileEditButton,
-    photoAddButton,
+    apiConfig,
     avatarButton,
-    cardsAddForm,
-    profileEditForm,
     avatarEditForm,
-    apiConfig
+    cardsAddForm,
+    photoAddButton,
+    profileEditButton,
+    profileEditForm,
+    validationConfig
 } from "../utils/constants.js";
-import { PopupWithForm } from "../components/PopupWithForm.js";
-import { UserInfo } from "../components/UserInfo.js";
-import { Section } from "../components/Section.js";
+import {PopupWithForm} from "../components/PopupWithForm.js";
+import {UserInfo} from "../components/UserInfo.js";
+import {Section} from "../components/Section.js";
 import './index.css'
 import {PopupWithImage} from "../components/PopupWithImage";
 import {Card} from "../components/Card";
@@ -51,13 +51,12 @@ const renderCard = (item) => {
     },
         userInfo.getUserId()
     );
-    const cardElement = card.generateCard();
-    cardList.addItem(cardElement);
+    return card.generateCard();
 }
 
 const cardList = new Section ({
     renderer: (item) => {
-        renderCard(item);
+        cardList.addItem(renderCard(item));
     }
 
 }, '.places');
@@ -69,7 +68,7 @@ const popupWithAddPhotoForm = new PopupWithForm('#popup_add', {
         popupWithAddPhotoForm.changeButtonState(true, 'Создать', 'Создание...');
         api.addCard(item)
             .then((res) => {
-                renderCard(res);
+                cardList.addItem(renderCard(item));
             })
             .catch(err => console.log(`Ошибка: ${err}`))
             .finally(() => popupWithAddPhotoForm.changeButtonState(false, 'Создать', 'Создание...'));
