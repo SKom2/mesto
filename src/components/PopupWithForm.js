@@ -32,7 +32,7 @@ export class PopupWithForm extends Popup {
         this._element = element;
     }
 
-        changeButtonState(isLoad, currentState, loadingState) {
+    changeButtonState(isLoad, currentState, loadingState) {
         if (isLoad) {
             this._button.textContent = loadingState
         } else {
@@ -40,14 +40,13 @@ export class PopupWithForm extends Popup {
         }
     }
 
-    _close() {
+    close() {
         super._close();
-        if (this._formElement) {
-            if (this._formElement.id === 'cardsAddForm' || this._formElement.id === 'avatarEditForm') {
-                this._formElement.reset();
-            }
+        if (this._formElement.id === 'cardsAddForm' || this._formElement.id === 'avatarEditForm') {
+            this._formElement.reset();
         }
     }
+    // Условие добавлено для того чтобы в попапе редактирования профиля при сохранении не сбрасывались заданные значения
 
     setEventListeners() {
         super.setEventListeners();
@@ -59,7 +58,6 @@ export class PopupWithForm extends Popup {
             if (this._callBack) {
                 this._callBack(this._getInputValues());
             }
-            this._close();
         });
     }
 }

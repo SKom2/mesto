@@ -62,6 +62,10 @@ export class Card {
         })
     }
 
+    removeCard() {
+        this._element.remove();
+    }
+
     generateCard() {
         this._element = this._getTemplate();
         this.numberOfLikes(this._likes.length);
@@ -77,5 +81,4 @@ export class Card {
         this._setEventListeners();
         return this._element;
     }
-
 }
