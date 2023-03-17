@@ -9,13 +9,14 @@ import {
     profileEditForm,
     validationConfig
 } from "../utils/constants.js";
+import {Api} from "../components/Api.js";
+import {PopupWithImage} from "../components/PopupWithImage";
 import {PopupWithForm} from "../components/PopupWithForm.js";
+import {PopupWithConfirmation} from "../components/PopupWithConfirmation.js";
 import {UserInfo} from "../components/UserInfo.js";
 import {Section} from "../components/Section.js";
-import './index.css'
-import {PopupWithImage} from "../components/PopupWithImage";
 import {Card} from "../components/Card";
-import {Api} from "../components/Api.js";
+import './index.css'
 
 const api = new Api(apiConfig);
 
@@ -41,12 +42,12 @@ const renderCard = (item) => {
         handleLikeClick: (request, cardId) => {
             api.handleControlLikes(request, cardId)
                 .then((res) => {
-                    card.numberOfLikes(res.likes.length);
+                    card.updateLikes(res.likes);
                 })
                 .catch(err => console.log(`Ошибка: ${err}`));
         },
-        handleDeleteButtonClick: (cardId, element) => {
-            popupWithDeletionConfirmationForm.open(cardId, element);
+        handleDeleteButtonClick: (cardId, card) => {
+            popupWithDeletionConfirmationForm.open(cardId, card);
         }
     },
         userInfo.getUserId()
@@ -67,8 +68,8 @@ const popupWithAddPhotoForm = new PopupWithForm('#popup_add', {
     callBack: (item) => {
         popupWithAddPhotoForm.changeButtonState(true, 'Создать', 'Создание...');
         api.addCard(item)
-            .then(() => {
-                cardList.addItem(renderCard(item));
+            .then((res) => {
+                cardList.addItem(renderCard(res));
             })
             .then(() => popupWithAddPhotoForm.close())
             .catch(err => console.log(`Ошибка: ${err}`))
@@ -87,16 +88,14 @@ const popupWithEditProfileForm = new PopupWithForm('#popup_edit', {
             .catch(err => console.log(`Ошибка: ${err}`))
             .finally(() => popupWithEditProfileForm.changeButtonState(false, 'Сохранить', 'Сохранение...'))
     },
-    submit: null
 });
 
-const popupWithDeletionConfirmationForm = new PopupWithForm('#popup_delete-card', {
-    callBack: null,
-    submit: (cardId, element) => {
+const popupWithDeletionConfirmationForm = new PopupWithConfirmation('#popup_delete-card', {
+    callBack: (cardId, card) => {
         popupWithDeletionConfirmationForm.changeButtonState(true, 'Да', 'Удаление...')
         api.deleteCard(cardId)
             .then(() => {
-                cardId.removeCard();
+                card.removeCard();
             })
             .then(() => popupWithDeletionConfirmationForm.close())
             .catch(err => console.log(`Ошибка: ${err}`))
@@ -115,7 +114,6 @@ const popupWithEditAvatarForm = new PopupWithForm('#popup_edit-avatar', {
             .catch(err => console.log(`Ошибка: ${err}`))
             .finally(() => popupWithEditAvatarForm.changeButtonState(false, 'Сохранить', 'Сохранение...'))
     },
-    submit: null
 })
 
 const cardsAddFormValidator = new FormValidator(validationConfig, cardsAddForm);

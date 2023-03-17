@@ -1,10 +1,9 @@
 import {Popup} from "./Popup.js";
 
 export class PopupWithForm extends Popup {
-    constructor(popupSelector, {callBack, submit}) {
+    constructor(popupSelector, {callBack}) {
         super(popupSelector);
         this._callBack = callBack;
-        this._submit = submit;
         this._formElement = this._popup.querySelector('.form');
         this._inputList = this._popup.querySelectorAll('.form__input');
         this._button = this._popup.querySelector('.form__button');
@@ -26,12 +25,6 @@ export class PopupWithForm extends Popup {
         });
     }
 
-    open(cardId, element) {
-        super.open();
-        this._cardId = cardId;
-        this._element = element;
-    }
-
     changeButtonState(isLoad, currentState, loadingState) {
         if (isLoad) {
             this._button.textContent = loadingState
@@ -41,7 +34,7 @@ export class PopupWithForm extends Popup {
     }
 
     close() {
-        super._close();
+        super.close();
         if (this._formElement.id === 'cardsAddForm' || this._formElement.id === 'avatarEditForm') {
             this._formElement.reset();
         }
@@ -52,12 +45,7 @@ export class PopupWithForm extends Popup {
         super.setEventListeners();
         this._formElement.addEventListener('submit', (evt) => {
             evt.preventDefault();
-            if (this._submit) {
-                this._submit(this._cardId, this._element);
-            }
-            if (this._callBack) {
-                this._callBack(this._getInputValues());
-            }
+            this._callBack(this._getInputValues());
         });
     }
 }
