@@ -35,11 +35,8 @@ export class PopupWithForm extends Popup {
 
     close() {
         super.close();
-        if (this._formElement.id === 'cardsAddForm' || this._formElement.id === 'avatarEditForm') {
-            this._formElement.reset();
-        }
+        this._formElement.reset();
     }
-    // Условие добавлено для того чтобы в попапе редактирования профиля при сохранении не сбрасывались заданные значения
 
     setEventListeners() {
         super.setEventListeners();
